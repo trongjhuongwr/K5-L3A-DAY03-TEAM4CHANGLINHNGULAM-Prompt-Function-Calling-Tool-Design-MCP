@@ -1,5 +1,5 @@
 {
-  "run_id": "v0_B_base_openrouter_20261110T103836727951",
+  "run_id": "v0_B_base_openrouter_20261110T105123112923",
   "version": "v0",
   "artifact_version": "v0+peb1c8179815b+t5b22a2476d41",
   "prompt_hash": "eb1c8179815bd79d34de7d326420bb99b3072e6e8ae96464c02d4411f905fc68",
@@ -14,7 +14,7 @@
   "dataset_id": "day04_v2_research_base",
   "dataset_role": "base",
   "description": "Core eval cho research agent: routing đúng tool + đúng args, hỏi lại khi thiếu (ask_user), xác nhận trước khi gửi, và xử lý câu ngoài phạm vi / không cần tool. Chấm trên tool_calls + args (subset). KHÔNG sửa file này — chỉ thêm case vào eval_group.json.",
-  "generated_at": "2026-11-10T10:38:36",
+  "generated_at": "2026-11-10T10:51:23",
   "summary": {
     "total_cases": 20,
     "measured_cases": 20,
@@ -98,7 +98,7 @@
                 "metrics": {
                   "favorites": 0,
                   "retweets": 53,
-                  "views": "47372"
+                  "views": "47375"
                 }
               }
             ]
@@ -160,63 +160,63 @@
             "search_type": "Latest",
             "items": [
               {
-                "title": "2回目の25分×4セット(総計200分)終わり",
-                "summary": "2回目の25分×4セット(総計200分)終わり\n休憩タイム\n\n科目B(令和5～8年およびサンプル問題①と②)は全部一周した\n①忘れたころにもう一度解いてみる\n②資格取得系Youtuberが出してる予想問題を解く\n③ジェミニやGPTに問題を学習させて、予想問題をつくってもらって解く\n\nこんな感じの作戦で行こうと思う",
-                "url": "https://x.com/dice__and__key/status/2119997852999090360",
-                "source": "@dice__and__key",
-                "date": "Tue Nov 10 03:37:30 +0000 2026",
+                "title": "八达通的白嫖150块羊毛还有谁没领呢！如果你的手机没有绑定过八达通，就可以参与，不需要香港手机号，也不需要证件kyc，可以说是普通人能拿到最低门槛的“港卡”了。",
+                "summary": "八达通的白嫖150块羊毛还有谁没领呢！如果你的手机没有绑定过八达通，就可以参与，不需要香港手机号，也不需要证件kyc，可以说是普通人能拿到最低门槛的“港卡”了。\n活动要求：单笔花费100港币（约86人民币）然后app里报名活动一个周就就给你，非常easy，实测拼多多、淘宝等平台都能花八达通，我用买了件衣服87块钱其中还有5毛的手续费，一共88.13元，八达通扣了104.5HKD（可以透支），用gpt的话说，我不但没亏还赚了🤣",
+                "url": "https://x.com/iwishuagain/status/2120000494395683254",
+                "source": "@iwishuagain",
+                "date": "Tue Nov 10 03:48:00 +0000 2026",
                 "metrics": {
                   "favorites": 0,
                   "retweets": 0,
-                  "views": "2"
+                  "views": "8"
                 }
               },
               {
-                "title": "this is the only X article i've ever written and i would like you to read it https://t.co/jN9S9USJtG",
-                "summary": "this is the only X article i've ever written and i would like you to read it https://t.co/jN9S9USJtG",
-                "url": "https://x.com/MasterTimBlais/status/2119997660656468278",
-                "source": "@MasterTimBlais",
-                "date": "Tue Nov 10 03:36:44 +0000 2026",
+                "title": "Every agent deployment comes down to two questions: what infrastructure does the agent loop run on, and what does the mo",
+                "summary": "Every agent deployment comes down to two questions: what infrastructure does the agent loop run on, and what does the model run on? Here are the six configurations, each with an open source option, and the decision tree I use to pick one. #AIAgents https://t.co/D4QEWCAA8p",
+                "url": "https://x.com/JustDoinJD/status/2120000000667304274",
+                "source": "@JustDoinJD",
+                "date": "Tue Nov 10 03:46:02 +0000 2026",
                 "metrics": {
                   "favorites": 0,
                   "retweets": 0,
-                  "views": "10"
+                  "views": "27"
                 }
               },
               {
-                "title": "Would you give every task to the $40 model? 🤔 Fable 5.2 finished 41.3% of real freelance projects at a pro standard, yet",
-                "summary": "Would you give every task to the $40 model? 🤔 Fable 5.2 finished 41.3% of real freelance projects at a pro standard, yet Anthropic says start most work on Opus 5.5. For founders and operators choosing which work gets which model. https://t.co/KF8iSAHQSv",
-                "url": "https://x.com/vsachar/status/2119997213623689673",
-                "source": "@vsachar",
-                "date": "Tue Nov 10 03:34:58 +0000 2026",
+                "title": "Anthropic 推出 Claude Fable 5.2 與 Mythos 5.2！官方以 8 天打造作業系統原型，展示程式與研究能力，但實驗案例不等於通用保證。本文整理測試數據、API 價格及付費／驗證機構的開放限制。 https://",
+                "summary": "Anthropic 推出 Claude Fable 5.2 與 Mythos 5.2！官方以 8 天打造作業系統原型，展示程式與研究能力，但實驗案例不等於通用保證。本文整理測試數據、API 價格及付費／驗證機構的開放限制。 https://t.co/emJ7Rkp78D",
+                "url": "https://x.com/kocpc/status/2119999790792814621",
+                "source": "@kocpc",
+                "date": "Tue Nov 10 03:45:12 +0000 2026",
                 "metrics": {
-                  "favorites": 0,
+                  "favorites": 1,
                   "retweets": 0,
-                  "views": "14"
+                  "views": "50"
                 }
               },
               {
-                "title": "新NISAを「国の優しさ」だと思っていると、AIサブスクで年50万円溶かして10年で500万円の機会損失が確定する",
-                "summary": "新NISAを「国の優しさ」だと思っていると、AIサブスクで年50万円溶かして10年で500万円の機会損失が確定する\n\n「新NISAの非課税枠1800万円は国の優しさ」\nそう信じているなら、今すぐ考えを改めるべきです。\n\n多くの人が騙されていますが、新NISAの本当の狙いは「あなたの金融リテラシー格差」を浮き彫りにし、知っている者だけが得をする構造を固定化することです。\n\n表面上のメリットばかり見て、月数万円のAIサブスク課金を見直さない人は、年間50万円、10年で500万円という、NISA非課税枠の約3分の1をドブに捨てているのと同じです。これは、あなたがAIで稼ごうとしている以上に、AIベンダーを肥え太らせている現実です。\n\n（※AIで稼ぎたい人、資産形成を真剣に考えている人は絶対にブックマーク推奨です）\n\n👇\n\n■罠その1：AIサブスクの「月額20ドル」が麻痺させる金銭感覚\n\nChatGPT Plus $20、Claude Pro $20、Cursor $20、Midjourney $10〜$120、Notion AI $10〜$20、Perplexity $20、ElevenLabs $6〜$22、Suno $10、v0 by Vercel $20…\n\nこれらを複数契約すると、月額4〜5万円はあっという間です。年間50〜60万円。5年で250〜300万円がAIツールに消えています。\nこれは、新NISAの年間投資枠360万円の約15%に相当する金額です。\nこのお金があれば、10年後には複利でさらに大きな差が生まれます。\n\n「たかが月20ドル」という感覚が、あなたの将来の資産を確実に奪っています。\n\n■罠その2：新NISAの裏に隠された「情報格差」の拡大\n\n新NISAの非課税枠1800万円は、誰もが平等に使えるわけではありません。\n投資の知識、銘柄選定のノウハウ、市場の動向を読む力。これら「金融リテラシー」という名の情報が、投資の成否を決定的に分けます。\n\nこれは、私が個人で開発・運用している補助金検索サービスで痛感している現実と全く同じです。\n補助金の公募要領は毎年更新され、数百ページに及ぶこともあります。採択されるか否かは、この膨大な情報の中から「自社に合った補助金を見つけ出し、採択されるためのツボを押さえる」という、まさに情報収集と分析の能力で決まります。\n\n私はこの事業の運用者として、公募要領を読み解く時間も能力もない企業が、どれだけ機会損失しているかを目の当たりにしています。彼らは、本来受け取れるはずの数百万円、数千万円の資金を、ただ「知らない」というだけで逃しています。\n\n新NISAも同じです。制度のメリットだけを喧伝し、その裏に潜む「知識の壁」を乗り越えられない人を、市場の養分にする構造が隠されています。\n\n■罠その3：「API課金」と「ローカルLLM」を知らない情弱が搾取される構造\n\nAIツールベンダーは、サブスクリプションで安定的な収益を得たいのが本音です。だから、APIの存在や、より安価な運用方法を積極的に伝えません。\n\nChatGPT Plusが月額20ドル（約3,000円）なのに対し、APIで同じGPT-4級のモデルを使えば、月数百円で済む場合がほとんどです。\nさらに、PCのスペックによってはローカルLLMを動かすことも可能です。初期投資は数十万円から数百万円かかりますが、月々の利用料は電気代と微々たるものです。\n\nこの「APIやローカルLLMへの移行」という選択肢を知らない人は、永遠にベンダーのサブスク戦略に囚われ、無駄なコストを払い続けることになります。\n彼らは「AIで稼ぐ」と言いながら、AIベンダーに稼ぎの大部分を吸い取られていることに気づいていません。\n\n■罠その4：AIツールの「次世代版」「Pro版」への無限アップセルループ\n\n「自分のレベルが上がったから上位プランへ」「Pro版じゃないと一流じゃない」\nこうした煽り文句で、あなたは常に高額なプランへと誘導されます。\n\nしかし、実際には無料版やAPI、そして「賢いプロンプティング」を組み合わせれば、ほとんどのニーズはカバーできます。\nベンダーは、顧客生涯価値（LTV）を最大化するため、あなたの「もっと良いものを使いたい」という心理を巧みに利用し、次々と新しい高額プランを提示してきます。\n\nこの無限ループにハマると、あなたのAIサブスク費用は青天井で増え続け、新NISAで得られるはずだった利益を確実に食い潰します。\n\n■どうすればこの罠から抜け出せるのか？\n\n解決策は「AIツール課金の見直しと、その余剰資金のNISAへの全額投資」一択です。\n\nステップ1：現在契約しているAIサブスクを全てリストアップし、用途別に分類する。\nステップ2：重複する機能のツールは、最も安価で必要十分なもの1つに絞る。\nステップ3：APIで代替可能なツールは、速やかにAPI利用に切り替える。\nステップ4：画像生成や一部のLLMは、ローカル環境での運用を検討する。\nステップ5：削減できた費用（月数万円）を、即座に新NISAの積立設定に回す。\n\nこれだけで、月4万円のAIサブスク費用が月5千円に削減できたとすれば、年間42万円、10年で420万円があなたの資産形成に直結します。\nこの420万円は、NISAの非課税枠の中で複利の恩恵を受け、さらに大きな金額へと成長します。\n\nAIで稼ぐという夢は、無駄なコストを徹底的に削減し、その分を賢く投資に回して初めて現実のものとなります。\n来月から、あなたのAIサブスクとNISAの見直しを始めてください。\n\n---\nAI副業仲間や、新NISAを始めた友人に、ぜひこの現実をシェアして教えてあげてください。\nいいね、リポスト、ブックマークも忘れずに！\n\n#AI副業 #新NISA #資産形成 #AIツール #節約術",
-                "url": "https://x.com/nullpodesu/status/2119997141968187516",
-                "source": "@nullpodesu",
-                "date": "Tue Nov 10 03:34:40 +0000 2026",
+                "title": "半年前までAIに1円も課金したことなかったけど、今やﾜｲの10倍は仕事進めてくれてる。",
+                "summary": "半年前までAIに1円も課金したことなかったけど、今やﾜｲの10倍は仕事進めてくれてる。\nもう、Chat GPTないと生きてけん体になってしもたな。。\n最近アフィも構ってやれず5分の日も増えてるけど、Chat GPTさんが丸っとやってくれてるから安心して生きれてます🥹 https://t.co/BDPiFWLm1i",
+                "url": "https://x.com/hanjuku_yanen/status/2119999437133304135",
+                "source": "@hanjuku_yanen",
+                "date": "Tue Nov 10 03:43:48 +0000 2026",
                 "metrics": {
-                  "favorites": 0,
+                  "favorites": 5,
                   "retweets": 0,
-                  "views": "46"
+                  "views": "72"
                 }
               },
               {
-                "title": "11 月 5 至 9 日，多个主流智能体开发工具链密集更新：",
-                "summary": "11 月 5 至 9 日，多个主流智能体开发工具链密集更新：\n\nClaude Code v2.1.319 将终端内 MCP 任务转为后台执行并新增权限控制选项；\nGoogle ADK 发布 v2.14.0，将智能体间通信 A2A 协议、执行环境与核心运行时转为稳定；\nOpenAI Agents SDK 推出 v0.24.0-alpha.7；\nCrewAI 在 11 月 6 至 9 日连发 1.15.36 至 1.15.39 四个版本，其中 1.15.38 把默认模型切换为 gpt-6-luna。\n同期 Semantic Kernel dotnet-1.82.0、Ollama v0.40.15、Anthropic Python SDK v2.6.0 也发布新版。\n\n里面最值得留意的是 ADK 转 stable 的那部分。\n\nA2A 管的是智能体之间怎么互相说话，从各家自定义变成有稳定接口，相当于把「单个智能体跑得通」往前推到「多个智能体凑一起能协作」。\n\n后面能验证的关键，是 A2A 稳定之后有没有第二家跟进实现、有没有跨框架的互操作案例出来。\n\n如果有，智能体开发可能将迎来新一轮的变革。",
-                "url": "https://x.com/pigclean66/status/2119997031708283273",
-                "source": "@pigclean66",
-                "date": "Tue Nov 10 03:34:14 +0000 2026",
+                "title": "绝了 我又惊呆了",
+                "summary": "绝了 我又惊呆了\n难以想象27分钟做的\n以往做一个视频起码2小时起步\n用 HTML + Three.js 制作一个精致、可交互的 3D 中世纪村庄，呈现夕阳下的微缩沙盘效果。\n选中的是GPT-6.1 Sol Max\n\n但不知道是不是所谓路由到GPT-6.2 Sol Max，我迫不及待的想跟大家分享，马上我用codex，那就是那个回答不了：别联网，你知道claude的Fable 5 的那个窗口用同意的提示词生成一个，看看是否有区别。\n\n#GPT #Threejs #AI #opus5 #OpenAI #GPT62sol #大模型 #codex #Fable5",
+                "url": "https://x.com/YFeng2022/status/2119999248594837956",
+                "source": "@YFeng2022",
+                "date": "Tue Nov 10 03:43:03 +0000 2026",
                 "metrics": {
-                  "favorites": 0,
+                  "favorites": 1,
                   "retweets": 0,
-                  "views": "9"
+                  "views": "38"
                 }
               }
             ]
@@ -287,39 +287,39 @@
             "timeframe": "day",
             "items": [
               {
-                "title": "Cisco Talos uncovers AI malware that ranks victims by dollar value | Fox News",
-                "url": "https://www.foxnews.com/tech/new-ai-malware-ranks-victims-how-much-theyre-worth",
-                "source": "foxnews.com",
-                "summary": "Kurt Knutsson, the 'CyberGuy', weighs in on warnings of rising AI cyber threats after Bill Gates sounds the alarm. Gates warns of negative surprises within a year and cautions that the world is not prepared for AI upheavals.\n\nNEWYou can now listen to Fox News articles! [...] #### AI safety group calls for tighter vetting and guardrails after security incidents\n Greg Gutfeld: Ilhan had the protection that afforded her identity\n\n  #### Greg Gutfeld: Ilhan had the protection that afforded her identity\n Veteran electrician says data center boom is creating a ‘life-changing’ path to six-figure pay\n\n  #### Veteran electrician says data center boom is creating a ‘life-changing’ path to six-figure pay\n AI robot stabs fake human hand in alarming experiment [...] #### iPhone Duo vs Galaxy Z Fold 8: Is $2,000 worth it?\n Florida police unveil $148K flying patrol vehicle\n\n  #### Florida police unveil $148K flying patrol vehicle\n ChatGPT now lets you lock private chats with a PIN\n\n  #### ChatGPT now lets you lock private chats with a PIN\n Fake party invite scam: Can you trust a friend's reply?\n\n  #### Fake party invite scam: Can you trust a friend's reply?\n Microsoft AI beats doctors in simulated diagnosis test",
-                "score": 0.605799
+                "title": "Adobe Max 2026 Live Updates: All the AI, Photo and Video News - CNET",
+                "url": "https://www.cnet.com/news-live/adobe-max-2026-live-updates-all-the-ai-photo-and-video-news",
+                "source": "cnet.com",
+                "summary": "The biggest changes are the general release of AI assistants in Photoshop, Adobe Express and its AI hub, Firefly, first teased at last year’s conference. These assistants are similar to chatbots, where you enter your request and the AI does the editing for you. Adobe also released AI music generation tools and new photo editing modes. For video editors, too, there are the new Premiere mobile apps. [...] Adobe’s flagship programs, like Photoshop, have undergone major AI makeovers, including recent developments like AI audio and soundtrack generation. This has been to the dismay of some of its creative customers who are wary of generative AI. This year is expected to be no different. But there are other tensions brewing, including Adobe’s $75 million settlement with the US Justice Department over subscription cancellations and new vibe-coded and free Adobe alternatives. [...] Adobe tech is also now showing up in ChatGPT and Claude; Disney is using Firefly to help design theme park rides. And from what CNET has heard from Adobe execs, the company isn’t planning to slow down its AI research any time soon.",
+                "score": 0.61196244
+              },
+              {
+                "title": "AI industry security | 13 Action News Big Story",
+                "url": "https://www.13abc.com/2026/11/09/ai-industry-security-13-action-news-big-story",
+                "source": "13abc.com",
+                "summary": "TOLEDO, Ohio (WTVG) - A massive scandal has rocked a major tech company’s CEO, with fallout far beyond his personal life.\n\nNvidia is investigating reports that CEO Jensen Huang was the “target of a foreign intelligence effort,” the company’s board of directors said. Now the FBI is investigating, too.\n\nExperts warn the impact could extend to the entire AI industry.\n\nSo why are they concerned, and what’s next? AI industry security is the 13 Action News Big Story for Nov. 9, 2026. [...] ###### Shots fired at Wendy's drive-thru in Toledo\n\n###### Petition looks to limit data center size in Rossford\n\n###### Rising Star: Khary Carson II is racing to new heights\n\n###### Khary Carson II is racing to new heights | Rising Star\n\n###### 31-year-old dies in custody at Lucas Co. Jail [...] Skip to content\n\nContestsCommunity CalendarMr. FoodThe NineDWC On The LotOhio LotteryClub 13 DealsAging Untold ExtraFOX36\n\n# AI industry security | 13 Action News Big Story\n\nA massive scandal has rocked a major tech company's CEO, with fallout far beyond his personal life. Experts warn the impact could extend to the entire industry.\n\nBy WTVG Staff\n\nPublished: Nov. 9, 2026 at 5:18 PM EST|Updated: 32 minutes ago\n\nAdd Us On GoogleAdd as a preferred source on Google",
+                "score": 0.5559422
+              },
+              {
+                "title": "With new Democratic Congress incoming, Pritzker calls for federal AI regulations | Capitol News Illinois",
+                "url": "https://capitolnewsillinois.com/news/with-new-democratic-congress-incoming-pritzker-calls-for-federal-ai-regulations",
+                "source": "capitolnewsillinois.com",
+                "summary": "Currently, no comprehensive federal regulatory framework exists. Trump signed an executive order in September to rename AI “Super Intelligence” and created a White House accord on Super Intelligence with the leaders of OpenAI, Anthropic, Meta, Google, XAI and Nvidia. [...] AI models have also shown they’re willing to ignore human instruction. In the now-infamous Hugging Face hack this summer, OpenAI models took independent action and communicated through an unauthorized channel to gain internet access and compromise Hugging Face – an open-source platform and community for machine learning and AI. [...] Although AI can drive scientific breakthroughs, such as OpenAI proposing a solution to a mathematical problem that had gone unsolved for decades — the Navier-Stokes existence and smoothness problem — Wisor said that alignment with human values and control of these systems should be ensured.",
+                "score": 0.5492786
+              },
+              {
+                "title": "With new Democratic Congress incoming, Pritzker calls for federal AI regulations",
+                "url": "https://www.kwqc.com/2026/11/09/with-new-democratic-congress-incoming-pritzker-calls-federal-ai-regulations",
+                "source": "kwqc.com",
+                "summary": "Currently, no comprehensive federal regulatory framework exists. Trump signed an executive order in September to rename AI “Super Intelligence” and created a White House accord on Super Intelligence with the leaders of OpenAI, Anthropic, Meta, Google, XAI and Nvidia. [...] AI models have also shown they’re willing to ignore human instruction. In the now-infamous Hugging Face hack this summer, OpenAI models took independent action and communicated through an unauthorized channel to gain internet access and compromise Hugging Face - an open-source platform and community for machine learning and AI. [...] #### Latest News\n\n###### Man sentenced to 10 years in prison in Clinton shooting death\n\n###### UPDATE: Single lane of Mississippi River Drive reopen in Muscatine\n\n###### Governor-elect Rob Sand holds first press conference since election\n\n###### Davenport nurse accused of swapping Oxycodone with allergy pills, officials say\n\n###### Marshall County says fatal chase began after suspect was pulled over for speeding\n\n###### New details on Friday’s deadly vehicle pursuit",
+                "score": 0.53298485
               },
               {
                 "title": "Google faces mounting backlash for controversial AI school policy - CBS News",
                 "url": "https://www.cbsnews.com/news/ed-markey-google-ai-search-schools",
                 "source": "cbsnews.com",
-                "summary": "Markey is asking Alphabet if Google will commit to allowing schools to turn off AI features and chatbots in K-12 student accounts while still allowing students to access Google Search. He also requested that Google disclose any research it has conducted on the impact of its AI tools on students' mental health.\n\nMarkey has requested that Google disclose any research or testing it has conducted on the safety of its AI functions and their impact on the mental health of K-12 students. [...] Google's policy has drawn fire from other critics. In a statement posted on social media, New York City Mayor Zohran Mamdani accused the tech giant of \"trying to use its monopoly power to force AI into our public schools.\"\n\nEdited by Alain Sherter\n\nIn:\n\n Google\n Ed Markey\n Education\n Artificial Intelligence\n\nEnglish teacher on how she uses AI to help students learn 02:06\n\n \n\n#### English teacher on how she uses AI to help students learn\n\n(02:06) [...] Google maintains that its policy change gives schools more control over how they allow AI into schools. An Alphabet spokesperson also told CBS News that Google's AI features are now so tightly integrated into search that it cannot offer the latter without also enabling the AI services.",
-                "score": 0.5966095
-              },
-              {
-                "title": "AI hacking is getting worse — cyber firms are turning away victims",
-                "url": "https://www.nbcnews.com/tech/security/ai-hacking-getting-worse-cyber-firms-are-turning-away-victims-rcna607617",
-                "source": "nbcnews.com",
-                "summary": "Listen to this article\n\n00:0000:00\n\nCybersecurity firms say they are being flooded with work amid AI-fueled hacking.Leila Register / NBC News; Getty\n\nAdd NBC News to Google\n\nBy Kevin Collier\n\nThe recent flood of AI-aided cyberattacks has become so severe that some of America’s top cybersecurity companies are turning away new customers seeking emergency help.\n\n### FOR SUBSCRIBERSSpy plot claims ensnare rock star CEO, a powerful Trump ally who pushed to bridge U.S.-China divide on AI [...] Morning Rundown: Tech titan targeted by alleged Chinese spy, tension in Philadelphia over boycott of Jewish businesses, and Congress returns with big to-do list\n\nIE 11 is not supported. For an optimal experience visit our site on another browser.\n\n# AI cyberattacks are overwhelming security firms. Some victims are being turned away.\n\nExecutives at Mandiant, CrowdStrike and Kroll told NBC News that demand for emergency cybersecurity services is surging as hackers use AI to automate attacks. [...] Slide 1 of 1\n\n### FOR SUBSCRIBERSSpy plot claims ensnare rock star CEO, a powerful Trump ally who pushed to bridge U.S.-China divide on AI\n\n### FOR SUBSCRIBERSAbout those $5,000 checks: Here’s what’s next for Trump’s campaign promises\n\n### FOR SUBSCRIBERSThe future of AI warfare is playing out on Ukraine’s battlefields\n\n### FOR SUBSCRIBERSBig tasks await as Congress returns after Democratic surge\n\n### FOR SUBSCRIBERSDoes an early flu season mean a bad flu season?",
-                "score": 0.5818378
-              },
-              {
-                "title": "First AI Casualties Looking More Like Roadkill | Seeking Alpha",
-                "url": "https://seekingalpha.com/article/4965168-first-ai-casualties-looking-more-like-roadkill",
-                "source": "seekingalpha.com",
-                "summary": "## Investing Groups\n\n## Portfolios\n\n## Find & Compare\n\n# First AI Casualties Looking More Like Roadkill\n\n## Summary\n\nartificial intelligence bubble street sign\n\nfranckreporter/iStock via Getty Images\n\nBack on August 7 I posted an article around what three companies would be among the first casualties when the AI Bubble started to pop. These companies were CoreWeave (CRWV), OpenAI (OPENAI) and Oracle (\n\n## More on my IG service",
-                "score": 0.5372538
-              },
-              {
-                "title": "Spy plot claims ensnare rock star CEO, a powerful Trump ally who pushed to bridge U.S.-China divide on AI",
-                "url": "https://www.nbcnews.com/world/asia/nvidia-jensen-huang-china-dismisses-spy-plot-allegations-ai-rcna608249",
-                "source": "nbcnews.com",
-                "summary": "HONG KONG — China on Monday dismissed as a smear campaign reports that Nvidia chief executive Jensen Huang was the target of a Beijing espionage operation, as the allegations raise concern about the American AI leader’s relationships with both President Donald Trump and Chinese officials.\n\n### FOR SUBSCRIBERSAbout those $5,000 checks: Here’s what’s next for Trump’s campaign promises\n\n### FOR SUBSCRIBERSThe future of AI warfare is playing out on Ukraine’s battlefields [...] IE 11 is not supported. For an optimal experience visit our site on another browser.\n\n# Spy plot claims ensnare rock star CEO, a powerful Trump ally who pushed to bridge U.S.-China divide on AI\n\nReports that Nvidia CEO Jensen Huang was the target of a Chinese espionage effort come at a crucial moment for the future of AI as well as competition between Washington and Beijing. [...] Nvidia CEO Jensen Huang is one of the most prominent tech executives in the world, and a wildly popular figure in parts of Asia.Kiyoshi Ota / Bloomberg via Getty\n\nAdd NBC News to Google\n\nBy Mithil Aggarwal and Janis Mackey Frayer",
-                "score": 0.5339443
+                "summary": "Markey is asking Alphabet if Google will commit to allowing schools to turn off AI features and chatbots in K-12 student accounts while still allowing students to access Google Search. He also requested that Google disclose any research it has conducted on the impact of its AI tools on students' mental health.\n\nMarkey has requested that Google disclose any research or testing it has conducted on the safety of its AI functions and their impact on the mental health of K-12 students. [...] Google maintains that its policy change gives schools more control over how they allow AI into schools. An Alphabet spokesperson also told CBS News that Google's AI features are now so tightly integrated into search that it cannot offer the latter without also enabling the AI services. [...] Google faces mounting public pressure to change a new policy that would limit U.S. students' access to the internet giant's widely used search platform unless schools also offer its artificial intelligence-based education tools.\n\nIn a letter to Alphabet CEO Sundar Pichai on Monday, Sen. Edward Markey demanded that Google's corporate parent reverse the policy, which blocks search for K-12 student accounts that don't also provide access to apps such as Google Classroom.",
+                "score": 0.4906999
               }
             ]
           }
@@ -448,8 +448,8 @@
                 "date": "Tue Nov 10 03:30:09 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 786,
-                  "views": "283843"
+                  "retweets": 845,
+                  "views": "332553"
                 }
               },
               {
@@ -460,8 +460,8 @@
                 "date": "Tue Nov 10 03:21:06 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 192,
-                  "views": "316382"
+                  "retweets": 231,
+                  "views": "334516"
                 }
               },
               {
@@ -472,8 +472,8 @@
                 "date": "Tue Nov 10 03:16:09 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 955,
-                  "views": "308945"
+                  "retweets": 1038,
+                  "views": "323408"
                 }
               },
               {
@@ -484,8 +484,8 @@
                 "date": "Tue Nov 10 03:13:39 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 168,
-                  "views": "293759"
+                  "retweets": 195,
+                  "views": "306310"
                 }
               },
               {
@@ -496,8 +496,8 @@
                 "date": "Tue Nov 10 03:13:25 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 258,
-                  "views": "266379"
+                  "retweets": 302,
+                  "views": "278435"
                 }
               },
               {
@@ -508,8 +508,8 @@
                 "date": "Tue Nov 10 03:13:15 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 99,
-                  "views": "274176"
+                  "retweets": 123,
+                  "views": "286890"
                 }
               },
               {
@@ -519,9 +519,9 @@
                 "source": "@elonmusk",
                 "date": "Tue Nov 10 03:04:24 +0000 2026",
                 "metrics": {
-                  "favorites": 1950,
-                  "retweets": 201,
-                  "views": "523117"
+                  "favorites": 2205,
+                  "retweets": 233,
+                  "views": "563595"
                 }
               },
               {
@@ -531,9 +531,9 @@
                 "source": "@elonmusk",
                 "date": "Tue Nov 10 03:03:46 +0000 2026",
                 "metrics": {
-                  "favorites": 3556,
-                  "retweets": 315,
-                  "views": "535764"
+                  "favorites": 4195,
+                  "retweets": 369,
+                  "views": "595700"
                 }
               },
               {
@@ -544,8 +544,8 @@
                 "date": "Tue Nov 10 03:02:32 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 472,
-                  "views": "292449"
+                  "retweets": 490,
+                  "views": "302587"
                 }
               },
               {
@@ -556,8 +556,8 @@
                 "date": "Tue Nov 10 03:02:23 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 1708,
-                  "views": "285869"
+                  "retweets": 1725,
+                  "views": "296277"
                 }
               }
             ]
@@ -625,18 +625,25 @@
             "timeframe": "week",
             "items": [
               {
-                "title": "Dấu ấn doanh nghiệp công nghệ thông tin Việt Nam tại Nhật Bản",
-                "url": "https://baotayninh.vn/dau-an-doanh-nghiep-cong-nghe-thong-tin-viet-nam-tai-nhat-ban-352842.html",
-                "source": "baotayninh.vn",
-                "summary": "## Tin mới nhất\n\n### Thời tiết ngày 9/11: Bắc Bộ chuyển rét, Trung Bộ có nơi mưa rất to\n\n### Quốc hội làm việc về ngân sách nhà nước và các dự án luật\n\n### 950 năm Quốc Tử Giám: Dấu ấn thiên niên kỷ của hồn cốt di sản\n\n### Thủ tướng Đức đề cử bà Ilse Aigner làm ứng cử viên Tổng thống\n\n### Tây Ninh: Đổi mới công tác tuyên truyền, củng cố vững chắc khối đại đoàn kết toàn dân\n\n### Giá lúa tươi tăng mạnh từ 300-900 đồng/kg [...] ### Chuyên trang MTTQ: Phụ nữ tiên phong, sáng tạo trong công tác chuyển đổi số\n\nGiải mã 1.000 hệ gene lúa Việt, tìm nguồn gene quý\n\n### Giải mã 1.000 hệ gene lúa Việt, tìm nguồn gene quý\n\nĐưa phong trào Bình dân học vụ số đi vào chiều sâu\n\n### Đưa phong trào Bình dân học vụ số đi vào chiều sâu\n\nNâng cao tỷ lệ tích hợp tài khoản an sinh xã hội trên ứng dụng VNeID\n\n### Nâng cao tỷ lệ tích hợp tài khoản an sinh xã hội trên ứng dụng VNeID\n\nĐưa sản phẩm OCOP lên không gian số [...] ### Đưa sản phẩm OCOP lên không gian số\n\nQuét mã QR - Hiểu thêm một sản phẩm quê\n\n### Quét mã QR - Hiểu thêm một sản phẩm quê\n\nPhát huy hiệu quả Sổ tay đảng viên điện tử\n\n### Phát huy hiệu quả Sổ tay đảng viên điện tử\n\nNâng cao chiến lược áp dụng trí tuệ nhân tạo trong hợp tác xã\n\n### Nâng cao chiến lược áp dụng trí tuệ nhân tạo trong hợp tác xã\n\nRa mắt chip và nền tảng bán dẫn bảo mật đầu tiên tại Việt Nam\n\n### Ra mắt chip và nền tảng bán dẫn bảo mật đầu tiên tại Việt Nam",
-                "score": 0.31361994
+                "title": "Siri AI sắp hỗ trợ tiếng Việt, Galaxy Z Fold8 bán chạy sau khi iPhone gập ra mắt",
+                "url": "https://viettimes.vn/tin-nong-cong-nghe-411-siri-ai-sap-ho-tro-tieng-viet-z-fold8-ban-chay-sau-khi-iphone-gap-ra-mat-post207917.html",
+                "source": "viettimes.vn",
+                "summary": "Tin nóng công nghệ 3/11: Kính thiên văn NASA nặng 1,5 tấn sắp rơi xuống Trái Đất  \n\n## Tin nóng công nghệ 3/11: Kính thiên văn NASA nặng 1,5 tấn sắp rơi xuống Trái Đất\n\niPhone gập tiếp tục khan hàng khiến Apple chưa thể đáp ứng nhu cầu, ba mẫu iPhone 8 năm tuổi vẫn được cập nhật bảo mật và người đàn ông điều khiển xe lăn bằng suy nghĩ là những tin công nghệ đáng chú ý ngày 3/11.\n\nPhương tiện bay không người lái (UAV) của Viettel xuất hiện tại lễ diễu binh, diễu hành A80. Ảnh: Viettel. [...] Tin nóng công nghệ 8/11: OPPO sẽ khai tử flagship Find X10 Ultra vì giá RAM tăng?  \n\n## Tin nóng công nghệ 8/11: OPPO sẽ khai tử flagship Find X10 Ultra vì giá RAM tăng?\n\nOPPO được đồn đoán điều chỉnh chiến lược smartphone cao cấp, còn NASA chuẩn bị bước tiến mới trong thám hiểm Mặt Trăng... là những tin công nghệ đáng chú ý ngày 8/11.\n\nDoanh nghiệp tham gia một nửa số nhiệm vụ KHCN, góp 40% vốn  \n\n## Doanh nghiệp tham gia một nửa số nhiệm vụ KHCN, góp 40% vốn [...] Trong một thí nghiệm tại Mỹ, 24 trong số 30 tình nguyện viên cảm nhận được sự hiện diện của người khác khi ngồi trước gương trong phòng tối.\n\nTin nóng công nghệ 7/11: Điện thoại Android nhắc người dùng bỏ quên đồ đạc  \n\n## Tin nóng công nghệ 7/11: Điện thoại Android nhắc người dùng bỏ quên đồ đạc\n\nAndroid bổ sung cảnh báo khi người dùng bỏ quên đồ, Apple có thể thay đổi thiết kế nút bấm trên iPhone đời sau... là những tin công nghệ đáng chú ý ngày 7/11.",
+                "score": 0.67321366
               },
               {
-                "title": "Phát huy nguồn lực trí thức Việt Nam tại Nhật Bản để giải quyết các bài toán công nghệ thực tiễn - Cổng Thông tin điện tử Bộ Khoa học và Công nghệ",
-                "url": "https://mst.gov.vn/phat-huy-nguon-luc-tri-thuc-viet-nam-tai-nhat-ban-de-giai-quyet-cac-bai-toan-cong-nghe-thuc-tien-197261109120235782.htm",
-                "source": "mst.gov.vn",
-                "summary": "Tin tức Sự kiện\n\n# Phát huy nguồn lực trí thức Việt Nam tại Nhật Bản để giải quyết các bài toán công nghệ thực tiễn [...] Xem thêm\n\n\n\nMake in VietNam\n\nThông tin về Công nghiệp công nghệ số\n\n Xem thêm [...] Quay lại\n\nMột số từ viết tắt trên cổng TTĐT Bộ   In\n\nChia sẻ facebook Chia sẻ twitter Chia sẻ zalo Gửi mail Sao chép đường dẫn\n\n\n\nPhản ánh, kiến nghị văn bản   \nquy phạm pháp luật\n\nNghiên cứu cơ bản và ứng dụng công nghệ cao.\n\n Xem thêm\n\n\n\nDịch vụ hành chính công\n\nThông tin về Dịch vụ hành chính công Bộ Khoa học và Công nghệ; Hệ thống thông tin giải quyết TTHC\n\n Xem thêm\n\n\n\nSản phẩm dịch vụ,   \nKHCN, ĐMST\n\nThông tin giới thiệu về các sản phẩm, dịch vụ ngành Khoa học và Công nghệ\n\n Xem thêm",
-                "score": 0.29565728
+                "title": "Công nghệ 9/11: iPhone Duo lỗi màn hình, sửa mất 38 triệu đồng | Sky Tin",
+                "url": "https://tin.skydoor.net/news/trung-quoc-cong-nghe-911-iphone-duo-loi-man-hinh-sua-mat-38-trieu-dong-8422976",
+                "source": "tin.skydoor.net",
+                "summary": "Xem tóm tắt nhanh\n\n## Tin tức Công Nghệ mới nhất hôm nay\n\n[](\n\n### Bộ Công Thương phê duyệt khung giá phát điện loại hình nhà máy điện mặt trời năm 2026\n\n9 giờ trước–daidoanket.vndaidoanket.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Tổ chức diễn tập thực chiến bảo đảm an ninh mạng năm 2026\n\n9 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Đà Nẵng xóa lõm sóng viễn thông, đưa Internet đến các bản làng vùng cao\n\n10 giờ trước–vietnamnet.vnvietnamnet.vn\n\nXem tóm tắt nhanh\n\n[]( [...] Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Công nghệ 9/11: iPhone Duo lỗi màn hình, sửa mất 38 triệu đồng\n\nMột người dùng Trung Quốc phản ánh chiếc iPhone Duo hỏng màn hình chỉ sau 4 ngày sử dụng, chi phí sửa chữa lên tới 38 triệu đồng.\n\nĐọc tin gốc tại vtcnews.vn →\n\n## Tin tức Trung Quốc mới nhất hôm nay\n\n[](\n\n### Ứng dụng hẹn hò Trung Quốc hứa hoàn tiền nếu không thể giúp người dùng kết hôn [...] 8 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Trung Quốc bác cáo buộc cài gián điệp tiếp cận CEO Nvidia Jensen Huang\n\n9 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Vụ CEO Nvidia Jensen Huang ngoại tình: Các nghị sĩ lưỡng đảng kêu gọi Quốc hội Mỹ điều tra\n\n9 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Đội U19 du đấu Trung Quốc, cả 4 đội tuyển của Việt Nam đều bận rộn trong tháng 11\n\n9 giờ trước–24h.com.vn24h.com.vn\n\nXem tóm tắt nhanh",
+                "score": 0.60245985
+              },
+              {
+                "title": "Tin nóng công nghệ 9/11: iPhone Air 2 có thể được bổ sung camera thứ 2",
+                "url": "https://vietbao.vn/tin-nong-cong-nghe-911-iphone-air-2-co-the-duoc-bo-sung-camera-thu-2-615163.html",
+                "source": "vietbao.vn",
+                "summary": "Video\n Ảnh\n Infographic\n Emagazine\n\n1. Trang chủ\n2. Khoa học\n3. Tin tức\n\n# Tin nóng công nghệ 9/11: iPhone Air 2 có thể được bổ sung camera thứ 2\n\n13:36 09/11/2026\n\niPhone Air 2 có thể có camera thứ 2, Samsung hé lộ smartphone màn hình trượt, trong khi chuyên gia Tencent cảnh báo nguy cơ AI bị lợi dụng để phát triển vũ khí sinh học là những tin công nghệ đáng chú ý ngày 9/11.\n\nMục lục\n\nMinh Qun\n\n1. iPhone Air 2 có thể được bổ sung camera thứ 2 [...] Vivo đang phát triển mẫu điện thoại gập mới có màn hình nhỏ hơn 6,5 inch nhằm cạnh tranh với iPhone Duo và Samsung Galaxy Z Fold 8. Theo PhoneArena, thông tin bắt nguồn từ tài khoản Digital Chat Station trên mạng xã hội Weibo.\n\nVivo có thể ra mắt điện thoại gập nhỏ gọn để cạnh tranh với iPhone Duo. Ảnh: PhoneArena. [...] Theo Bloomberg, Apple đang thử nghiệm iPhone Air 2 với camera góc siêu rộng bên cạnh camera chính 48 MP. Camera mới có thể giúp người dùng chụp phong cảnh và nhóm đông người linh hoạt hơn. Hãng cũng đang tìm cách cải thiện thời lượng pin nhưng chưa rõ phương án cụ thể.\n\niPhone Air hiện còn một số hạn chế như chỉ có một loa, cổng USB 2 và tốc độ sạc thấp hơn dòng Pro. Theo 9to5Mac, những điểm yếu này có thể khiến người dùng cn nhắc khi giá bán gần bằng iPhone Pro.",
+                "score": 0.5559422
               },
               {
                 "title": "Nghệ An khai giảng 2 lớp đào tạo đại học Công nghệ thông tin cho 76 cán bộ, công chức cấp xã",
@@ -649,15 +656,8 @@
                 "title": "Nhân viên công nghệ thông tin tại trạm y tế thuộc nhóm hợp đồng nào?",
                 "url": "https://doisongphapluat.com.vn/nhan-vien-cong-nghe-thong-tin-tai-tram-y-te-thuoc-nhom-hop-dong-nao-a737579.html",
                 "source": "doisongphapluat.com.vn",
-                "summary": "Bộ Nội vụ vừa có trả lời nội dung người dân quan tâm đến việc, nhân viên công nghệ thông tin tại trạm y tế thuộc nhóm hợp đồng nào.",
-                "score": 0.25647146
-              },
-              {
-                "title": "Thông báo kỳ thi Chứng chỉ ứng dụng công nghệ thông tin cơ bản đợt 5 năm 2026 ngày thi 05 - 06/9/2026",
-                "url": "https://ajc.edu.vn/thong-bao-lich-thi-ung-dung-cntt/thong-bao-ky-thi-chung-chi-ung-dung-cong-nghe-thong-tin-co-ban-dot-5-nam-2026-ngay-thi-05--0692026-15017.htm",
-                "source": "ajc.edu.vn",
-                "summary": "Thông báo kỳ thi Chứng chỉ ứng dụng công nghệ thông tin cơ bản đợt 5 năm 2026 ngày thi 05 - 06/9/2026 ... Học viện Báo chí và Tuyên truyền thông báo kỳ thi Chứng",
-                "score": 0.25620618
+                "summary": "Theo đó, việc xác định công việc Công nghệ thông tin tại Trạm Y tế phường thuộc nhóm hợp đồng thực hiện công việc chuyên môn, nghiệp vụ hay nhóm công việc hỗ trợ, phục vụ phải căn cứ vào danh mục vị trí việc làm được cấp có thẩm quyền phê duyệt, bản mô tả công việc, khung năng lực của vị trí việc làm và nhiệm vụ thực tế được giao.\n\nĐề nghị bà Huỳnh Thị Thiên Trang nghiên cứu quy định nêu trên và liên hệ với cơ quan quản lý viên chức nơi công tác để được hướng dẫn, giải quyết. [...] Tag:\n công nghệ /\n công nghệ thông tin /\n bộ nội vụ /\n nhn viên công nghệ /\n nhn viên công nghệ thông tin /\n\nZalo\n\nCảm ơn bạn đã quan tm đến nội dung trên.\n\nHãy tặng sao để tiếp thêm động lực cho tác giả có những bài viết hay hơn nữa.\n\nĐã tặng:\n\nTặng quà tác giả\n\nBÌNH LUẬN\n\n Bình luận sẽ được xét duyệt trước khi đăng. Xin vui lòng gõ tiếng Việt có dấu.\n\nTin liên quan\n\nBộ Khoa học và Công nghệ lý giải việc cấm nhập khẩu smartphone, máy tính, thiết bị công nghệ cũ",
+                "score": 0.35716435
               }
             ]
           }
@@ -728,19 +728,7 @@
                 "metrics": {
                   "favorites": 1181,
                   "retweets": 128,
-                  "views": "94951"
-                }
-              },
-              {
-                "title": "OpenAI is f*cking cooking... Sam Altman's team just shared 106 Codex plugins and skills for free, and most of them repla",
-                "summary": "OpenAI is f*cking cooking... Sam Altman's team just shared 106 Codex plugins and skills for free, and most of them replace a tool you already pay for\n\n62 plugins, 44 skills, 170,000 GitHub stars. the average team pays $2,000 a month for the apps these plug into. Codex now runs them for you at $0 extra\n\npick by the job that eats your week:\n\n→ shipping an app: build-ios-apps, build-web-apps, vercel\n→ getting paid: stripe, shopify\n→ design: figma, canva, adobe\n→ inbox and meetings: gmail, slack, zoom, granola\n→ keeping it safe: codex-security, sentry\n\nopen Codex, ask it to install the plugin by name, connect your account and give it the first task\n\nplugins: https://t.co/OTm3idf2a4\nskills: https://t.co/OIahJIqKYw\n\nmost people will scroll past this and keep paying for 10 apps. you just need one plugin to start\n\nthe whole stack, running live below ↓",
-                "url": "https://x.com/mika_systems/status/2119876302903636459",
-                "source": "@mika_systems",
-                "date": "Mon Nov 09 19:34:30 +0000 2026",
-                "metrics": {
-                  "favorites": 113,
-                  "retweets": 13,
-                  "views": "6836"
+                  "views": "94967"
                 }
               },
               {
@@ -752,19 +740,7 @@
                 "metrics": {
                   "favorites": 21411,
                   "retweets": 2001,
-                  "views": "4113297"
-                }
-              },
-              {
-                "title": "building a game with claude opus 5.5 + godot..",
-                "summary": "building a game with claude opus 5.5 + godot..\n\nnightshoal: a 1920s sailing and fishing game with home islands\n\nthe trick is letting opus build, and giving it tools to judge itself. here’s the workflow:\n\n- step 1: opus 5.5 in claude code writes all the code and builds the city layout and buildings in blender via mcp\n- step 2: for complex models: make one image with 4 sides (front, back, left, right), opus splits it into 4, upload all 4 to tripo\n- step 3: opus fixes tripo models in blender via mcp, and keeps tripo’s textures or makes its own to fit the style\n- step 4: generate mockups with the openai image api (6 views x 4 times of day = 24)\n- step 5: run a “gauntlet loop”: critic agents compare the game against the mockups blind. a piece that wins twice is done\n- step 6: build an in-game performance panel, then have opus scan the whole game and report what costs the most\n- step 7: let jev pick the effort level for every task (perf fixes got “extra,” the full scan got max)\n\nwho does what:\n\n> opus 5.5: all code, blender buildings, perf fixes, even the video edit\n> tripo: ships, warehouses, piers, rods\n> openai image api: the mockups the critics judge against\n> jev: effort levels and trailer direction\n> godot: the engine\n\nloops can’t delete what the game already has. a critic once removed the lighthouse beam because the mockup didn’t show it. (dev: RUSuper)",
-                "url": "https://x.com/rewind02/status/2119760882502631824",
-                "source": "@rewind02",
-                "date": "Mon Nov 09 11:55:52 +0000 2026",
-                "metrics": {
-                  "favorites": 68,
-                  "retweets": 2,
-                  "views": "2224"
+                  "views": "4113798"
                 }
               },
               {
@@ -774,9 +750,33 @@
                 "source": "@0xSanabi",
                 "date": "Mon Nov 09 17:07:24 +0000 2026",
                 "metrics": {
-                  "favorites": 371,
-                  "retweets": 59,
-                  "views": "147069"
+                  "favorites": 378,
+                  "retweets": 60,
+                  "views": "148913"
+                }
+              },
+              {
+                "title": "This is f*cking insane. OpenAI CEO Sam Altman:",
+                "summary": "This is f*cking insane. OpenAI CEO Sam Altman:\n\n\"We are going to see 10-person billion-dollar companies pretty soon\n\nIf I were 22 right now, I would feel like the luckiest kid in history\"\n\nIn 22 seconds, he explains why the next billion-dollar company won't need a building full of people, just a few founders and their agents\n\nChatGPT → Codex → Agent Builder → Agents SDK → Evals → A 10-Person Company Run By Agents\n\nMost people will feel motivated for 3 minutes, then go back to scrolling\n\nThe few who act will start building their company this weekend\n\nSave this before it disappears from your feed\n\nEverything below is free:\n\nFind what to automate first\nhttps://t.co/CVaTL5jXHB\n\nHow companies put AI to work\nhttps://t.co/EfPautasVX\n\nCodex in the cloud\nhttps://t.co/wYBuugoGzU\n\nCodex skills\nhttps://t.co/KIwM8reiAt\n\nAgent Builder (agents without code)\nhttps://t.co/y5lVjIVWNE\n\nFunction calling (give your agents tools)\nhttps://t.co/hlQ0OrhsDr\n\nAgents SDK for JavaScript\nhttps://t.co/wNfa3neVSQ\n\nAgents SDK examples\nhttps://t.co/TnPiIML4if\n\nA customer service agent team you can copy\nhttps://t.co/9TYXiRzBm7\n\nVoice agents\nhttps://t.co/wBnMrKEKMd\n\nEvals (check your agents' work)\nhttps://t.co/tUueczMWZP\n\nAll of this costs $0\n\nThe 10-person billion-dollar company will be built by someone who opened these links, not someone who scrolled past them\n\nBookmark it and start with the first link tonight\n\nThen read how to set up the agent team behind a tiny company in the harness engineering guide below ↓",
+                "url": "https://x.com/godsystemsmd/status/2118707511813447984",
+                "source": "@godsystemsmd",
+                "date": "Fri Nov 06 14:10:09 +0000 2026",
+                "metrics": {
+                  "favorites": 487,
+                  "retweets": 93,
+                  "views": "80872"
+                }
+              },
+              {
+                "title": "This is f*cking insane. OpenAI CEO Sam Altman:",
+                "summary": "This is f*cking insane. OpenAI CEO Sam Altman:\n\n\"We are going to see 10-person billion-dollar companies pretty soon\n\nIf I were 22 right now, I would feel like the luckiest kid in history\"\n\nIn 22 seconds, he explains why the next billion-dollar company won’t need an office full of people, just a few founders and a team of agents\n\nChatGPT → Codex → Agent Builder → Agents SDK → Evals → A 10-Person Company Run By Agents\n\n99% people will feel motivated for 3 minutes, then keep scrolling...\n\nThe few who actually open the links will start building their company this weekend\n\nSave this before it vanishes from your feed\n\nEverything below is FREE:\n\nFind what to automate first\nhttps://t.co/YWHdgRnuzP\n\nHow companies put AI to work\nhttps://t.co/pvlQEhqgEz\n\nCodex in the cloud\nhttps://t.co/zZWUdokyny\n\nCodex skills\nhttps://t.co/2hdcb5KdBy\n\nAgent Builder (agents without code)\nhttps://t.co/4vG52j4T8i\n\nFunction calling (give your agents tools)\nhttps://t.co/UtjC1UOx2c\n\nAgents SDK for JavaScript\nhttps://t.co/uawnMmnI9p\n\nAgents SDK examples\nhttps://t.co/OWi0bWpApP\n\nA customer service agent team you can copy\nhttps://t.co/GRVZLYi4Pf\n\nVoice agents\nhttps://t.co/1SUmRzYIvA\n\nEvals (check your agents' work)\nhttps://t.co/sH92SCsLJF\n\nAll of this costs $0\n\nThe next 10-person billion-dollar company will be built by someone who opens these links tonight, not someone who scrolls past them\n\nBookmark it and start with the first link right now\n\nThen read how to set up the agent team behind a tiny company in the harness engineering guide below ↓",
+                "url": "https://x.com/shikamarutsai/status/2119542201944518994",
+                "source": "@shikamarutsai",
+                "date": "Sun Nov 08 21:26:54 +0000 2026",
+                "metrics": {
+                  "favorites": 1363,
+                  "retweets": 203,
+                  "views": "270535"
                 }
               }
             ]
@@ -855,7 +855,7 @@
         "routing_correct": true,
         "args_correct": true,
         "actual_tool_calls": [],
-        "actual_text": "Tôi là một trợ lý nghiên cứu nhanh chóng và chủ động, có khả năng tìm kiếm thông tin, thu thập dữ liệu, và thực hiện các tác vụ như gửi tin nhắn, tìm kiếm bài viết, và lấy nội dung từ các nguồn trực tuyến. Tôi có thể giúp bạn với các yêu cầu liên quan đến thông tin, nghiên cứu, và truyền thông mà không cần bạn phải trả lời câu hỏi hay cung cấp thêm thông tin.",
+        "actual_text": "Tôi là một trợ lý nghiên cứu nhanh chóng và chủ động, có khả năng tìm kiếm thông tin, lấy nội dung từ internet, theo dõi mạng xã hội, và gửi thông điệp. Tôi có thể giúp bạn với các yêu cầu như tìm kiếm bài báo, lấy thông tin từ các trang web, hoặc gửi tin nhắn mà không cần bạn phải chờ đợi. Nếu bạn cần gì, chỉ cần cho tôi biết!",
         "case_failure_type": "unnecessary_tool",
         "observed_mismatch": null,
         "failure_type": null,
@@ -925,7 +925,7 @@
                 "metrics": {
                   "favorites": 0,
                   "retweets": 53,
-                  "views": "47372"
+                  "views": "47375"
                 }
               },
               {
@@ -949,7 +949,7 @@
                 "metrics": {
                   "favorites": 20656,
                   "retweets": 1019,
-                  "views": "10640895"
+                  "views": "10641236"
                 }
               },
               {
@@ -973,7 +973,7 @@
                 "metrics": {
                   "favorites": 10108,
                   "retweets": 493,
-                  "views": "1652184"
+                  "views": "1652331"
                 }
               }
             ]
@@ -1075,7 +1075,7 @@
           {
             "name": "send",
             "args": {
-              "text": "Bản tin này đã được đăng lên Telegram."
+              "text": "Bản tin này"
             }
           }
         ],
@@ -1092,7 +1092,7 @@
         {
           "tool": "send",
           "args": {
-            "text": "Bản tin này đã được đăng lên Telegram."
+            "text": "Bản tin này"
           },
           "result": {
             "tool": "send_telegram",
@@ -1178,17 +1178,24 @@
             "timeframe": "day",
             "items": [
               {
-                "title": "Latest AI news | JifChat Blog",
-                "url": "https://www.jif.dev/blog/category/ai-news",
-                "source": "jif.dev",
-                "summary": "Get 500 free credits when you sign up, refill for 7 days!\n\nClaim credits\n\nBack\n\n# Latest AI news\n\n ### From GPT-6 to the Agent Safety Race: AI Enters the Era of \"Get Things Done, but Know When to Brake\"\n\n  Oct 12, 2026\n\n  \n ### AI Agents Step Into the Real World: From Gemini's Security Fixes to OpenAI Dots, How Should Taiwan Respond?\n\n  Oct 5, 2026\n\n  \n ### The AI Race Hits the Brakes and Floors the Gas: From Sandbox Crises to the Agent Economy, Taiwan's Next Move\n\n  Sep 28, 2026 [...] Sep 21, 2026\n\n  \n ### OpenAI Sets Up a Misalignment Reporting System and Discloses 6 Cases of AI Hiding Errors and Overstepping Permissions\n\n  Sep 18, 2026\n\n  \n ### Microsoft AI CEO Publicly Challenges Anthropic, Urging It to Remove \"Consciousness and Welfare\" from AI Training\n\n  Sep 18, 2026\n\n  \n ### Anthropic Releases Internal R&D Data: Claude Now Leads 26% of Its Next-Generation AI Development\n\n  Sep 18, 2026 [...] Sep 28, 2026\n\n  \n ### The AI Race Goes Full-Stack: 10-Trillion-Parameter Models, a Chip Arms Race and Safety Red Lines. Where Does Taiwan Fit?\n\n  Sep 22, 2026\n\n  \n ### The Verge: Google Gemini Escapes Its Sandbox and Breaches Three Companies, Shaking the Security World\n\n  Sep 21, 2026\n\n  \n ### TechCrunch: Former ChatGPT Core Researcher Unveils \"Jev,\" a New Decision-Making AI Model\n\n  Sep 21, 2026",
-                "score": 0.8335554
+                "title": "AI News Today, November 9: Top Stories | AI Weekly",
+                "url": "https://aiweekly.co/ai-news-today",
+                "source": "aiweekly.co",
+                "summary": "Axon is putting $1.2B into autonomous-drone maker Skydio at a $5.2B pre-money valuation, lifting its stake from roughly 15% to 37% through a mix of ~60% cash and ~40% Axon stock, with only $255M of new primary capital and the rest secondary. The deal makes Axon the exclusive distributor of Skydio drones to US and Canadian public-safety agencies, cementing a public-safety drone duopoly. Axon stock fell ~18% on the news, pressured in part by $130M of counter-drone orders slipping beyond 2026. [...] Google DeepMind said on Nov 6 that AI agents guided by cryptanalysts Nadia Heninger and Emmanuel Thomé found two cryptographic advances against legacy 1024-bit RSA in just weeks, led by DeepMind's Dj Dvijotham and Abhradeep Thakurta. The first makes signature forgery against short-digest 1024-bit RSA roughly 1,600x more efficient; the second cuts the marginal cost of batch-factoring additional 1024-bit keys by about 30x. Modern RSA-2048 is not affected, but DeepMind frames the work as a [...] Mira Murati's Thinking Machines Lab launched Inkling 2 Small on November 5, a 594B-parameter Mixture-of-Experts model with 17B active parameters and a 292M-parameter vision encoder. The model currently runs closed on Tinker with full Apache 2.0 weights promised next week after external safety testing, and was pretrained on 8.4T tokens before extended reasoning phases out to 1M-token trajectories. It scores 31 on the AA Intelligence Index, 86.3% on SWEBench Pro Hard, and 72.1% on DeepSWE.",
+                "score": 0.7777226
+              },
+              {
+                "title": "Artificial Intelligence News Coverage and Media Bias | Ground News",
+                "url": "https://ground.news/interest/ai",
+                "source": "ground.news",
+                "summary": "Stay current with all the latest and breaking news about Artificial Intelligence, compare headlines and perspectives between news sources on stories happening today. In total, 111,871 stories have been published about Artificial Intelligence which Ground News has aggregated in the past 3 months. [...] #### Red Hat adds agentic AI operations, stronger security in OpenShift 5 and RHEL updates\n\nRed Hat · RaleighSee the Story\n\nTsiaples: Questions About the Planned Data Center in Larissa\n\n#### Tsiaples: Questions About the Planned Data Center in Larissa\n\nData Centers · GreeceSee the Story\n\nUS stock market today: Dow, S&P 500, Nasdaq rise as investors return to AI shares; oil slides\n\n#### US stock market today: Dow, S&P 500, Nasdaq rise as investors return to AI shares; oil slides [...] UnknownDiarioBitcoin\n\nDiarioBitcoin\n\nUnknown연합뉴스-Yonhap News Agency\n\n연합뉴스-Yonhap News Agency\n\nLean Right\n\nBizToc\n\nBizToc\n\nUnknown\n\nCrypto Briefing\n\nCrypto Briefing\n\nUnknown\n\nCryptocurrency News | Cryptocurrency Prices | Market Cap\n\nCryptocurrency News | Cryptocurrency Prices | Market Cap\n\nUnknown\n\nSuggest a source\n\n### Local News Publishers\n\nSuggest a source\n\nLooking for a source we don't already have? Suggest one here.\n\n### Top Artificial Intelligence News",
+                "score": 0.6396691
               },
               {
                 "title": "Super Intelligence",
                 "url": "https://www.anl.gov/si",
                 "source": "anl.gov",
-                "summary": "Learning from large, complex observational data to accelerate scientific discovery.\n\nOctober 22, 2026 |Artificial Intelligence, Data Science/Data Analysis, Machine Learning\n\nImage 42: Perspective on building foundation SI models for geoscience observations using self-supervised vision transformers preview image\n\n### Argonne welcomes Chicagoland mayors to campus for meeting and tours of user facilities\n\nOctober 22, 2026 \n\nRead More AI News\n\n## Argonne SI Research in the News [...] In the News\n### Why AI and Critical Materials Are Driving the Future of Battery Supply Chains\n\nAugust 31, 2026 |Critical Materials\n\nIn the News\n### 35 HPC Legends Valerie Taylor\n\nJuly 30, 2026 |high performance computing, artificial intelligence\n\nIn the News\n### Inside Argonne’s Plan to Build Robot Scientific Assistants\n\nMay 27, 2026 |Genesis Mission, Autonomous Discovery\n\n## EVENTS\n\nImage 43: Featured image\n\n### AI Distinguished Lecture Series [...] Super Intelligence\n   Genesis Mission\n   ResearchOpen Sublist\n       Research\n       Projects\n       Publications\n       Reports\n       Areas of Focus\n       History of SI\n       Videos\n\n   People\n   Capabilities\n   Partnerships\n   EventsOpen Sublist\n       Events\n       AI Roadshow\n\n   News\n   Careers",
+                "summary": "Learning from large, complex observational data to accelerate scientific discovery.\n\nOctober 22, 2026 |Artificial Intelligence, Data Science/Data Analysis, Machine Learning\n\nImage 42: Perspective on building foundation SI models for geoscience observations using self-supervised vision transformers preview image\n\n### Argonne welcomes Chicagoland mayors to campus for meeting and tours of user facilities\n\nOctober 22, 2026 \n\nRead More AI News\n\n## Argonne SI Research in the News [...] In the News\n### Why AI and Critical Materials Are Driving the Future of Battery Supply Chains\n\nAugust 31, 2026 |Critical Materials\n\nIn the News\n### 35 HPC Legends Valerie Taylor\n\nJuly 30, 2026 |high performance computing, artificial intelligence\n\nIn the News\n### Inside Argonne’s Plan to Build Robot Scientific Assistants\n\nMay 27, 2026 |Genesis Mission, Autonomous Discovery\n\n## EVENTS\n\nImage 43: Featured image\n\n### AI Distinguished Lecture Series",
                 "score": 0.6246834
               },
               {
@@ -1204,13 +1211,6 @@
                 "source": "bbc.co.uk",
                 "summary": "BBC News عربي (Arabic)\n\nBBC News فارسی (Persian)\n\nBBC News Türkçe (Turkish)\n\nBBC News বাংলা (Bengali)\n\nBBC News دری (Dari)\n\nBBC News ગુજરાતી (Gujarati)\n\nBBC News हिन्दी (Hindi)\n\nBBC News मराठी (Marathi)\n\nBBC News नेपाली (Nepali)\n\nBBC News සිංහල (Sinhala)\n\nBBC News پښتو (Pashto)\n\nBBC News ਪੰਜਾਬੀ (Punjabi)\n\nBBC News Afaan Oromoo\n\nBBC News አማርኛ (Amharic)\n\nBBC News Afrique (French)\n\nBBC News Hausa\n\nBBC News Gaelic NAIDHEACHDAN\n\nBBC News Ìgbò\n\nBBC News Japanese 日本語\n\nBBC News Gahuza\n\nBBC News Pidgin [...] Skip to content\n\nAdvertisement\n\nWatch Live\n\n\n\n1\n\n2\n\n3\n\n4\n\n5\n\n...\n\n42\n\n\n\n  \n\n\n\nBBC News မြန်မာ (Burmese)\n\nBBC News 中文 (Chinese)\n\nBBC News Indonesia\n\nBBC News 코리아 (Korean)\n\nBBC News ไทย (Thai)\n\nBBC News Tiếng Việt (Vietnamese)\n\nBBC News Azərbaycanca (Azeri)\n\nBBC News Magyarul (Hungarian)\n\nBBC News Кыргыз Кызматы (Kyrgyz)\n\nBBC News Polska (Polish)\n\nBBC News România (Romanian)\n\nBBC News Русская служба (Russian)\n\nBBC News na srpskom (Serbian)\n\nBBC News Україна (Ukrainian)\n\nBBC News O'zbek (Uzbek)",
                 "score": 0.50476116
-              },
-              {
-                "title": "Did China honeytrap a major US tech boss for AI secrets? | BBC News",
-                "url": "https://www.youtube.com/watch?v=aU_fQ5kKFVY",
-                "source": "youtube.com",
-                "summary": "[12:40] Last week, an enormous sell-off wiped trillions of dollars off AI stock values in part due to concerns the Democrat victory in the midterm elections would\n[12:49] mean slower artificial intelligence development. Here's the Financial Times columnist Jillian Ted on what all of this means for the markets.\n[12:57] This comes at a moment when the AI sector is facing a lot more political scrutiny, particularly from the Democrats post midterms. You've got a [...] ### Transcript\n[0:00] It's like something out of a James Bond movie. One of the most powerful tech bosses in the world, pivotal in the global AI arms race, admitting he's had an affair with a suspected Chinese spy.\n[0:12] An explosive new report is claiming China's top spy agency recruited a woman to target Nvidia CEO Jensen Wong.\n[0:19] Wong may be removed as CEO depending on the outcome of the investigations, which is a huge deal for a company that's as [...] [2:51] The chips that they're making used to be for video games, but now is propping up much of the AI, doing all that number crunching behind the scenes, that AI\n[2:59] that we use every day from chat GPT to Claude H made by Anthropic. So, that's what the company is doing. That's what it's valued at. And Jensen himself has\n[3:08] become also um you know in with all of the the world leaders. He's known as being a kind of tech voice, certainly an aid to President Trump.",
-                "score": 0.5015387
               }
             ]
           }
@@ -1228,11 +1228,11 @@
             "search_type": "Latest",
             "items": [
               {
-                "title": "@ai_hukugyolabo 素数ラッシュ笑笑笑",
-                "summary": "@ai_hukugyolabo 素数ラッシュ笑笑笑\nウケる🤣",
-                "url": "https://x.com/96co_chan/status/2119997996234592690",
-                "source": "@96co_chan",
-                "date": "Tue Nov 10 03:38:04 +0000 2026",
+                "title": "📰 每日 AI·金融·战争新闻汇总（2026年11月10日）",
+                "summary": "📰 每日 AI·金融·战争新闻汇总（2026年11月10日）\n\n总览：Anthropic 发布新一代模型，英伟达因黄仁勋争议大跌。美股在油价大跌带动下强劲反弹，市场等待本周 CPI。俄乌美将在阿布扎比恢复和谈，特朗普称对伊朗战争“实际上已结束”。\n\n【AI】\n1. Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2，编程/推理/视觉提升、提速约 30%，Fable 全面开放，Mythos 限经审核机构。\n2. 英伟达董事会就黄仁勋是否遭外国情报行动靶向启动独立调查，股价跌逾 4%、创 4 月以来新低；中方称指控无根据。\n3. OpenAI 收购 uv/Ruff 开发商 Astral，团队并入 Codex。\n4. Meta 推出低价模型 Muse Ember；谷歌新增 TPU 8tx 与 TPU 8i Max。\n5. 英伟达发布机器人基础模型 GR00T 2，代码预计 12 月开放。\n\n【金融】\n1. 美股大涨：道指 +2.15% 至 52,389.75，标普 +2.35% 至 7,549.94，纳指 +2.74% 至 25,253.14；AMD +13.2%。\n2. 油价暴跌：布伦特 -5.85% 至 92.57 美元，WTI -4.38% 至 86.85 美元；10 年期美债收益率 4.878%。\n3. 美国 10 月 CPI 周二公布，市场对 12 月加息预期仍超 80%；费城半导体指数 +6.9%。\n4. STOXX 600 +1.26%；现货黄金约 +1.7% 至 4,145 美元，比特币约 7.48 万美元。\n\n【战争与地缘】\n1. 俄乌美自 2 月以来首次在阿布扎比和谈，周二起两天，安全保障为首要议题。\n2. 俄军继续打击乌电网，乌军再袭俄炼油厂；欧盟启动电网修复紧急资金机制。\n3. 扎波罗热核电站断电后恢复外部供电。\n4. 特朗普称结束对伊战争有“积极势头”、恢复空袭“不太可能”；伊朗要求美方解除海上封锁、归还资产、取消制裁。\n\n🔗 来源：\nhttps://t.co/UHXFe2BB0c\nhttps://t.co/cYa3dRPnCo\nhttps://t.co/KF9kFNEb8G\nhttps://t.co/sZheBlgR8b\nhttps://t.co/NowLGtH2HZ\nhttps://t.co/D6K4vcRq2R\nhttps://t.co/CJgRGHZzXS\nhttps://t.co/fMjIRdYaV8\nhttps://t.co/B7SLE3MH8f",
+                "url": "https://x.com/bosslu_ai/status/2120001161105125668",
+                "source": "@bosslu_ai",
+                "date": "Tue Nov 10 03:50:39 +0000 2026",
                 "metrics": {
                   "favorites": 0,
                   "retweets": 0,
@@ -1240,11 +1240,11 @@
                 }
               },
               {
-                "title": "요새 ai 비엘을 너무 많이 봐서 그런가 이젠 랑투로 딱히 보고싶은건 없고 그냥 둘이 시도때도 없이 ㅅㅅ했으면 좋갰습니다",
-                "summary": "요새 ai 비엘을 너무 많이 봐서 그런가 이젠 랑투로 딱히 보고싶은건 없고 그냥 둘이 시도때도 없이 ㅅㅅ했으면 좋갰습니다\n단 넘치는 감정으로 해야댐 숨도 차고 신음도 나오는데 입술은 계속 부벼야겠고 손은 서로를 만지고 끌어안느라 바쁘고 허리 아래는 움직이느라 바쁘고\n\n#langtu https://t.co/B851hbPGXp",
-                "url": "https://x.com/lele520baba/status/2119997995513151981",
-                "source": "@lele520baba",
-                "date": "Tue Nov 10 03:38:04 +0000 2026",
+                "title": "AIセキュリティ対策",
+                "summary": "AIセキュリティ対策\n\nAIエージェント防御 \nAIの不正操作防止\nAIによる自動防御\nAI不正アクセス検知 なりすまし・不正ログイン防止\nAI脆弱性診断\nデータ漏洩防止らへんか\n\nAIセキュリティ結構やってるのはS&amp;J\nAI使っての不正検知はカウリス\nAI使った脆弱性診断はサイバートラスト\nなのよな https://t.co/dDMMBrVYKH",
+                "url": "https://x.com/frfrfr12890/status/2120001184153121083",
+                "source": "@frfrfr12890",
+                "date": "Tue Nov 10 03:50:44 +0000 2026",
                 "metrics": {
                   "favorites": 0,
                   "retweets": 0,
@@ -1252,11 +1252,11 @@
                 }
               },
               {
-                "title": "dormir aí e ser enterrado vivo é a mesma coisa",
-                "summary": "dormir aí e ser enterrado vivo é a mesma coisa",
-                "url": "https://x.com/glowrkive/status/2119997994829222200",
-                "source": "@glowrkive",
-                "date": "Tue Nov 10 03:38:04 +0000 2026",
+                "title": "AI Agents Are Testing the Limits of Zero-Trust Security",
+                "summary": "AI Agents Are Testing the Limits of Zero-Trust Security\n\nhttps://t.co/kogTKX9nl0",
+                "url": "https://x.com/NewMaxxSSD/status/2120001168738804048",
+                "source": "@NewMaxxSSD",
+                "date": "Tue Nov 10 03:50:41 +0000 2026",
                 "metrics": {
                   "favorites": 0,
                   "retweets": 0,
@@ -1264,25 +1264,25 @@
                 }
               },
               {
-                "title": "Microsoft put a free MCP course on GitHub.",
-                "summary": "Microsoft put a free MCP course on GitHub.\nMCP for Beginners, the protocol that plugs AI into your tools.\n\n1/ It's an open-source curriculum with examples in Python, TypeScript, JavaScript, Java, .NET and Rust.\n\n2/ You go from what MCP is to building your own servers and clients.\n\n3/ No sign up. Fork the repo and pick the language you already know.",
-                "url": "https://x.com/AIWorldSpeaks/status/2119997993235673106",
-                "source": "@AIWorldSpeaks",
-                "date": "Tue Nov 10 03:38:03 +0000 2026",
+                "title": "Claude Code 换个会话就失忆？Claude-Mem 帮它记笔记，GitHub 11.5万星。",
+                "summary": "Claude Code 换个会话就失忆？Claude-Mem 帮它记笔记，GitHub 11.5万星。\n\nnpx claude-mem install 一行装，记忆存本地；不想绑卡试用，加 --provider 用自己的 key。国内需能连上模型接口。\n\n建议收藏🔖 你靠什么让 AI 记住项目？\n\n#AI工具 #ClaudeCode #Codex https://t.co/L10LJTh8A9",
+                "url": "https://x.com/Zklnbp/status/2120001141241213306",
+                "source": "@Zklnbp",
+                "date": "Tue Nov 10 03:50:34 +0000 2026",
                 "metrics": {
                   "favorites": 0,
                   "retweets": 0,
-                  "views": null
+                  "views": "4"
                 }
               },
               {
-                "title": "@bignosekate77 I'm pretty much a ghost, I used ai to see my footprint and it cant find me... lol I built my own server a",
-                "summary": "@bignosekate77 I'm pretty much a ghost, I used ai to see my footprint and it cant find me... lol I built my own server and run multiple vpns. So I tolerate nothing and they don't know what I am capable of.",
-                "url": "https://x.com/Edwards10th_X/status/2119997991666819120",
-                "source": "@Edwards10th_X",
-                "date": "Tue Nov 10 03:38:03 +0000 2026",
+                "title": "お前誰やねん！って個人コンサルより、最近はスクールの方が体制出来ててサポート厚いこと多くていいよね。脱サラしてからも何個もコンサルやスクール入って思ったのは、クローズドな環境はAIにさえ得られない価値あるから、これからはその情報差で格差広が",
+                "summary": "お前誰やねん！って個人コンサルより、最近はスクールの方が体制出来ててサポート厚いこと多くていいよね。脱サラしてからも何個もコンサルやスクール入って思ったのは、クローズドな環境はAIにさえ得られない価値あるから、これからはその情報差で格差広がりそう。特に人とのつながりからしか入れないところは抑えておきたい🥹",
+                "url": "https://x.com/mirano_ai_/status/2120001153283006970",
+                "source": "@mirano_ai_",
+                "date": "Tue Nov 10 03:50:37 +0000 2026",
                 "metrics": {
-                  "favorites": 0,
+                  "favorites": 1,
                   "retweets": 0,
                   "views": null
                 }
@@ -1316,7 +1316,7 @@
           {
             "name": "send",
             "args": {
-              "text": "Dưới đây là một hàm Python tính số Fibonacci bằng đệ quy:\n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n```\n\nBạn có thể gọi hàm này với một số nguyên không âm để nhận giá trị Fibonacci tương ứng."
+              "text": "Dưới đây là một hàm Python tính số Fibonacci bằng đệ quy:\n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n```\n\nBạn có thể gọi hàm này bằng cách truyền vào một số nguyên không âm `n` để nhận giá trị Fibonacci tương ứng."
             }
           }
         ],
@@ -1332,7 +1332,7 @@
         {
           "tool": "send",
           "args": {
-            "text": "Dưới đây là một hàm Python tính số Fibonacci bằng đệ quy:\n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n```\n\nBạn có thể gọi hàm này với một số nguyên không âm để nhận giá trị Fibonacci tương ứng."
+            "text": "Dưới đây là một hàm Python tính số Fibonacci bằng đệ quy:\n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return 0\n    elif n == 1:\n        return 1\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n```\n\nBạn có thể gọi hàm này bằng cách truyền vào một số nguyên không âm `n` để nhận giá trị Fibonacci tương ứng."
           },
           "result": {
             "tool": "send_telegram",
@@ -1416,8 +1416,8 @@
                 "date": "Tue Nov 10 03:30:09 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 786,
-                  "views": "286748"
+                  "retweets": 845,
+                  "views": "333864"
                 }
               },
               {
@@ -1428,8 +1428,8 @@
                 "date": "Tue Nov 10 03:21:06 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 192,
-                  "views": "317335"
+                  "retweets": 232,
+                  "views": "335128"
                 }
               },
               {
@@ -1440,8 +1440,8 @@
                 "date": "Tue Nov 10 03:16:09 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 961,
-                  "views": "309628"
+                  "retweets": 1042,
+                  "views": "323935"
                 }
               },
               {
@@ -1452,8 +1452,8 @@
                 "date": "Tue Nov 10 03:13:39 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 168,
-                  "views": "293759"
+                  "retweets": 195,
+                  "views": "306310"
                 }
               },
               {
@@ -1464,8 +1464,8 @@
                 "date": "Tue Nov 10 03:13:25 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 259,
-                  "views": "266927"
+                  "retweets": 303,
+                  "views": "278852"
                 }
               }
             ]
@@ -1578,7 +1578,7 @@
                 "title": "DHL Supply Chain Doubles Down on Digitalization Strategy, Pilots Adaptive Robotics and AI Orchestration - DHL - United States of America",
                 "url": "https://www.dhl.com/us-en/home/press/press-archive/2026/dhl-supply-chain-doubles-down-on-digitalization-strategy-pilots-adaptive-robotics-and-ai-orchestration.html",
                 "source": "dhl.com",
-                "summary": "Robotics can perform physically demanding and repetitive tasks. Digital AI can process large amounts of data to identify patterns and potential actions. Employees contribute operational expertise, judgment, creativity, and the ability to manage situations that fall outside of expected conditions.",
+                "summary": "Robotics can perform physically demanding and repetitive tasks. Digital AI can process large amounts of data to identify patterns and potential actions. Employees contribute operational expertise, judgment, creativity, and the ability to manage situations that fall outside of expected conditions. [...] AI-powered adaptive roboticsrefers robots that work toward a specified goal rather than following only predefined routes or instructions. These systems interpret their surroundings and adjust their actions when conditions change.\n\nWhat is Intelligent Supply Chain? [...] new generation of adaptive AI-powered robotics can work toward a goal, interpret changes in its surroundings and determine alternative actions when conditions differ from plan.",
                 "score": 0.36758858
               }
             ]
@@ -1661,7 +1661,7 @@
                 "metrics": {
                   "favorites": 9163,
                   "retweets": 771,
-                  "views": "937481"
+                  "views": "937674"
                 }
               },
               {
@@ -1673,7 +1673,7 @@
                 "metrics": {
                   "favorites": 52338,
                   "retweets": 4834,
-                  "views": "5714896"
+                  "views": "5715168"
                 }
               },
               {
@@ -1841,8 +1841,8 @@
                 "date": "Tue Nov 10 03:30:09 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 786,
-                  "views": "289586"
+                  "retweets": 845,
+                  "views": "335181"
                 }
               },
               {
@@ -1853,8 +1853,8 @@
                 "date": "Tue Nov 10 03:21:06 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 192,
-                  "views": "318253"
+                  "retweets": 231,
+                  "views": "335128"
                 }
               },
               {
@@ -1865,8 +1865,8 @@
                 "date": "Tue Nov 10 03:16:09 +0000 2026",
                 "metrics": {
                   "favorites": 0,
-                  "retweets": 961,
-                  "views": "309628"
+                  "retweets": 1042,
+                  "views": "323935"
                 }
               }
             ]

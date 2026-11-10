@@ -10,6 +10,13 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 TIMEOUT = 30
 
+try:
+    from env_loader import load_lab_env
+    load_lab_env(ROOT)
+except Exception:
+    pass
+
+
 
 def err(tool: str, exc: Exception) -> dict[str, Any]:
     return {"tool": tool, "error": type(exc).__name__, "message": str(exc)}
