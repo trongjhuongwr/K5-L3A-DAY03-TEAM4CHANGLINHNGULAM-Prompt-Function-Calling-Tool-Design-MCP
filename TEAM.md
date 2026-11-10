@@ -14,7 +14,7 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Nguyễn Trọng Hướng | [Điền MSSV] | nguyentronghuong05@gmail.com | [trongjhuongwr](https://github.com/trongjhuongwr) | Trưởng nhóm / Core Architect |
 |   2 | Đàm Tuấn Linh | 2A202603624 | damlinh820@gmail.com | [damlinh820](https://github.com/damlinh820) | Research & Evidence Specialist |
-|   3 | Lê Thành Đạt | [Điền MSSV] | dat.ltforwork@gmail.com | [datlt203357](https://github.com/datlt203357) | UI & Testing Specialist |
+|   3 | Lê Thành Đạt | 2A202603579 | 26ai.datlt7@vinuni.edu.vn | [datlt203357](https://github.com/datlt203357) | UI & Testing Specialist |
 |   4 | Trung Quân | [Điền MSSV] | trungquana123@gmail.com | [Jaden](https://github.com/trungquana123) | Content Analysis Specialist |
 
 ## Cá nhân
@@ -63,21 +63,23 @@ Mỗi thành viên đồng thời tạo một báo cáo riêng trong `report/tea
 
 ---
 
-## 3. LeThanhDat-[MSSV]
-- **File báo cáo:** [report/team/MSSV_LeThanhDat.md](report/team/MSSV_LeThanhDat.md)
+## 3. LeThanhDat-2A202603579
+- **File báo cáo:** [report/team/2A202603579_LeThanhDat.md](report/team/2A202603579_LeThanhDat.md)
 
 ### Phần việc phụ trách
 - Đánh giá chéo hành vi của model với OpenAI provider trên máy cá nhân.
-- Soạn thảo Phần A cho Báo cáo nhóm (`group_report.md`): Mục A1, A2, A3 và Mục 3 (Giải pháp).
-- Chuẩn bị tài liệu hướng dẫn chạy UI và câu hỏi mẫu kiểm thử cho Showdown.
+- Xây dựng unit test và eval cases cho `calculator`, `sentiment`, `compare`.
+- Phân tích và tinh chỉnh hàm so sánh đối tượng lồng nhau trong `run_eval.py`.
+- Soạn thảo Phần A cho Báo cáo nhóm (`group_report.md`): Mục A1, A2, A3 và kịch bản Showdown.
 
 ### Đóng góp cụ thể
-- Thử nghiệm độc lập và ghi nhận log với OpenAI model đạt 100% accuracy.
+- Thử nghiệm độc lập và ghi nhận log với OpenAI model đạt độ chính xác cao.
+- Viết 9 unit test độc lập cho 3 công cụ, bảo đảm xử lý lỗi an toàn không crash.
 - Lập bảng tổng hợp toàn bộ các tool của cả nhóm (A2) và bộ 5 câu hỏi mẫu đa dạng (A3).
 
 ### Bằng chứng
-- Commits: `0dedaae`.
-- Files: Mục A1–A3, Mục 3 trong `report/team/group_report.md`.
+- Commits: `0dedaae`, `db9fbf4`, `f3e58e3`.
+- Files: `2A202603579_LeThanhDat.md`, `starter_v0/run_eval.py`, Mục A1–A3 trong `report/team/group_report.md`.
 
 ---
 
