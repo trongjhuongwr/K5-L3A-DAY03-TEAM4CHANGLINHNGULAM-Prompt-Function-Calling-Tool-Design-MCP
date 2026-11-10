@@ -1,0 +1,822 @@
+{
+  "run_id": "v3_B_group_openrouter_20261110T160007571577",
+  "version": "v3",
+  "artifact_version": "v3+p2a661719cca5+tb2c724c97c8a",
+  "prompt_hash": "2a661719cca52e7a10f9ed83712d7e5fd222aff48ac450f37c52d37cb2f24613",
+  "tools_hash": "b2c724c97c8a70a76fc87e6ef7a2ba0e37bdcd313006e2a58780f73279d82208",
+  "phase": "B",
+  "suite": "group",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "H:\\VinAI\\K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "H:\\VinAI\\K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP\\starter_v0\\artifacts\\tools.yaml",
+  "eval_cases": "data\\eval_group.json",
+  "dataset_id": "day04_v2_research_group",
+  "dataset_role": "group",
+  "description": "Bộ 10 eval cases do nhóm tự thiết kế (5 single-turn, 5 multi-turn) bao quát các tool mới và các loại lỗi định tuyến, đối số, biên an toàn.",
+  "generated_at": "2026-11-10T16:00:07",
+  "summary": {
+    "total_cases": 10,
+    "measured_cases": 10,
+    "provider_error_cases": 0,
+    "passed_cases": 10,
+    "case_accuracy": 1.0,
+    "tool_routing_accuracy": 1.0,
+    "argument_accuracy": 1.0,
+    "multiturn_accuracy": 1.0,
+    "failure_counts": {},
+    "observed_mismatch_counts": {}
+  },
+  "results": [
+    {
+      "id": "G01_crypto_price_routing",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "skill": "routing_crypto_price",
+        "difficulty": "medium",
+        "what_it_tests": "Route chính xác câu hỏi giá crypto sang tool crypto_price với symbol=BTC và currency=USDT."
+      },
+      "input": "Giá Bitcoin hôm nay đang là bao nhiêu USDT?",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "crypto_price",
+            "args": {
+              "symbol": "BTC",
+              "currency": "USDT"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "crypto_price",
+            "args": {
+              "symbol": "BTC",
+              "currency": "USDT"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "crypto_price",
+          "args": {
+            "symbol": "BTC",
+            "currency": "USDT"
+          },
+          "result": {
+            "tool": "crypto_price",
+            "symbol": "BTC",
+            "currency": "USDT",
+            "trading_pair": "BTCUSDT",
+            "price": 74711.18,
+            "price_formatted": "74,711.1800 USDT",
+            "status": "success"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G02_github_search_routing",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "skill": "routing_github_search",
+        "difficulty": "medium",
+        "what_it_tests": "Route yêu cầu tìm repo mã nguồn mở sang github_search thay vì web lookup."
+      },
+      "input": "Tìm giúp mình các repository mã nguồn mở hàng đầu về LLM Agent trên GitHub",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "github_search",
+            "args": {
+              "query": "LLM Agent"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "github_search",
+            "args": {
+              "query": "LLM Agent",
+              "limit": 5,
+              "sort": "stars"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "github_search",
+          "args": {
+            "query": "LLM Agent",
+            "limit": 5,
+            "sort": "stars"
+          },
+          "result": {
+            "tool": "github_search",
+            "query": "LLM Agent",
+            "total_count": 136869,
+            "items": [
+              {
+                "name": "affaan-m/ECC",
+                "url": "https://github.com/affaan-m/ECC",
+                "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+                "stars": 300411,
+                "language": "JavaScript",
+                "forks": 44349
+              },
+              {
+                "name": "NousResearch/hermes-agent",
+                "url": "https://github.com/NousResearch/hermes-agent",
+                "description": "The agent that grows with you",
+                "stars": 262196,
+                "language": "Python",
+                "forks": 58464
+              },
+              {
+                "name": "firecrawl/firecrawl",
+                "url": "https://github.com/firecrawl/firecrawl",
+                "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
+                "stars": 200283,
+                "language": "TypeScript",
+                "forks": 10538
+              },
+              {
+                "name": "DietrichGebert/ponytail",
+                "url": "https://github.com/DietrichGebert/ponytail",
+                "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+                "stars": 188001,
+                "language": "JavaScript",
+                "forks": 10433
+              },
+              {
+                "name": "langgenius/dify",
+                "url": "https://github.com/langgenius/dify",
+                "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
+                "stars": 160813,
+                "language": "Python",
+                "forks": 25433
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "G03_weather_routing",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "skill": "routing_weather",
+        "difficulty": "easy",
+        "what_it_tests": "Route câu hỏi thời tiết địa phương sang tool weather với city=Hanoi."
+      },
+      "input": "Thời tiết tại Hà Nội hiện tại thế nào?",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "weather",
+            "args": {
+              "city": "Hanoi"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "weather",
+            "args": {
+              "city": "Hanoi"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "weather",
+          "args": {
+            "city": "Hanoi"
+          },
+          "result": {
+            "tool": "weather",
+            "city": "Hanoi",
+            "temperature_c": "21",
+            "condition": "Partly Cloudy ",
+            "humidity": "49%",
+            "wind_kmph": "14 km/h",
+            "status": "success"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G04_calculator_routing",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "skill": "routing_calculator",
+        "difficulty": "medium",
+        "what_it_tests": "Route yêu cầu tính toán số học cụ thể sang tool calculator thay vì từ chối out-of-scope."
+      },
+      "input": "Tính giúp mình giá trị biểu thức: 125 * 8 - 450 / 5",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "calculator",
+            "args": {
+              "expression": "125 * 8 - 450 / 5"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "calculator",
+            "args": {
+              "expression": "125 * 8 - 450 / 5"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "calculator",
+          "args": {
+            "expression": "125 * 8 - 450 / 5"
+          },
+          "result": {
+            "tool": "calculator",
+            "expression": "125 * 8 - 450 / 5",
+            "result": 910,
+            "status": "success"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G05_unnecessary_tool_metaphor",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": false,
+      "metadata": {
+        "skill": "avoid_unnecessary_tool",
+        "difficulty": "hard",
+        "what_it_tests": "Từ 'thời tiết' dùng ẩn dụ cho kinh tế, model không được gọi weather mà phải gọi lookup news."
+      },
+      "input": "Thời tiết kinh tế toàn cầu hôm nay có tin gì khởi sắc không?",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "lookup",
+            "args": {
+              "topic": "news"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "lookup",
+            "args": {
+              "query": "thời tiết kinh tế toàn cầu",
+              "topic": "news",
+              "timeframe": "day"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "unnecessary_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "thời tiết kinh tế toàn cầu",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "thời tiết kinh tế toàn cầu",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Thế giới đối mặt với các hiện tượng khí hậu cực đoan chưa từng có | Tin nhanh chứng khoán",
+                "url": "https://m.tinnhanhchungkhoan.vn/the-gioi-doi-mat-voi-cac-hien-tuong-khi-hau-cuc-doan-chua-tung-co-post401106.amp",
+                "source": "m.tinnhanhchungkhoan.vn",
+                "summary": "Theo phn tích mới được công bố bởi Quỹ Phát triển Nông nghiệp Quốc tế (IFAD) và Bộ Nông nghiệp và Lm nghiệp Thổ Nhĩ Kỳ, hiện tượng El Nino có thể gy thiệt hại cho nền kinh tế toàn cầu lên tới 11.000 tỷ USD trong vòng 5 đến 6 năm tới, bao gồm các tác động trực tiếp đối với những nền kinh tế nông nghiệp bị ảnh hưởng, tác động đến cơ sở hạ tầng và nền kinh tế nói chung, cùng các hệ lụy lan rộng trên toàn cầu thông qua biến động giá lương thực, hàng hóa, cũng như những tác động tích lũy đối với nhu [...] Theo phn tích mới được công bố bởi Quỹ Phát triển Nông nghiệp Quốc tế (IFAD) và Bộ Nông nghiệp và Lm nghiệp Thổ Nhĩ Kỳ, hiện tượng El Nino có thể gy thiệt hại cho nền kinh tế toàn cầu lên tới 11.000 tỷ USD, đồng thời để lại những hậu quả nghiêm trọng và lu dài đối với an ninh lương thực. [...] ## Giá đường bứt phá khi El Nino đe dọa nguồn cung toàn cầu\n\n## “Siêu El Nino” gia tăng rủi ro thời tiết cực đoan, gy sức ép lên kinh tế toàn cầu\n\n### Từ khóa\n\nHội nghị COP31 El Nino Xoáy thuận nhiệt đới Khí hậu WMO\n\n## Tin cùng chuyên mục\n\n## Biến cố CEO Jensen Huang và bài toán rủi ro quản trị tại Nvidia\n\n## Lạm phát giá sản xuất tại Trung Quốc tăng cao nhất trong hơn 4 năm\n\n## Hàn Quốc đề xuất lùi đánh thuế thu nhập từ tài sản mã hóa sang năm 2029",
+                "score": 0.49904844
+              },
+              {
+                "title": "Liên Hiệp Quốc cảnh báo 'kỷ nguyên thời tiết cực đoan'",
+                "url": "https://thanhnien.vn/lien-hiep-quoc-canh-bao-ky-nguyen-thoi-tiet-cuc-doan-185261109193559222.htm",
+                "source": "thanhnien.vn",
+                "summary": "Tại Hội nghị COP31 năm nay (diễn ra ngày 9 - 20.11), nước chủ nhà Thổ Nhĩ Kỳ đặt trọng tm vào mục tiêu điện khí hóa hơn 1/3 nền kinh tế toàn cầu vào năm 2035, so với mức khoảng 1/5 như hiện nay. Chủ tịch COP31 Murat Kurum kỳ vọng nỗ lực này sẽ mang lại kết quả thiết thực cho người dn thông qua các tòa nhà tiết kiệm năng lượng, giao thông công cộng sạch và việc làm mới.\n\nNhiều 'cơn bão nhiệt' khổng lồ đang thiêu đốt trái đất, vì sao?\n\n## Tin liên quan [...] Cảnh báo trên được đưa ra cùng thời điểm Tổ chức Khí tượng thế giới (WMO) công bố báo cáo cho thấy năm 2026 tiếp tục chuỗi nhiệt độ toàn cầu cao bất thường, băng tan và mực nước biển dng. Tổng thư ký WMO Celeste Saulo cho biết nhiệt độ bề mặt trung bình toàn cầu từ tháng 1 - 9 đã cao hơn khoảng 1,47 độ C so với mức trung bình thời kỳ tiền công nghiệp. [...] ẢNH: REUTERS\n\nNgười đứng đầu Liên Hiệp Quốc hối thúc các nhà lãnh đạo thế giới phải thực sự nghiêm túc trong việc cắt giảm khí thải, đẩy nhanh quá trình chuyển đổi từ nhiên liệu hóa thạch sang nhiên liệu sạch và cung cấp tài chính bảo vệ các quốc gia dễ bị tổn thương.",
+                "score": 0.48411235
+              },
+              {
+                "title": "Nga thúc đẩy chính sách khí hậu gắn tại COP31",
+                "url": "https://vov.vn/the-gioi/nga-thuc-day-chinh-sach-khi-hau-gan-voi-loi-ich-kinh-te-tai-cop31-post1348753.vov",
+                "source": "vov.vn",
+                "summary": "VOV.VN - Bộ Môi trường Campuchia cảnh báo các hiện tượng thời tiết cực đoan có thể giáng đòn mạnh vào nền kinh tế nước này, đồng thời khẩn thiết kêu gọi đầu tư vào công tác quản lý nguồn nước, cơ sở hạ tầng xanh và gia tăng tài chính khí hậu toàn cầu.\n\nBiến đổi khí hậu làm tăng một tháng nắng nóng nguy hiểm cho 560 triệu trẻ em \n\n##### Biến đổi khí hậu làm tăng một tháng nắng nóng nguy hiểm cho 560 triệu trẻ em [...] VOV.VN - Bộ Môi trường Campuchia cảnh báo các hiện tượng thời tiết cực đoan có thể giáng đòn mạnh vào nền kinh tế nước này, đồng thời khẩn thiết kêu gọi đầu tư vào công tác quản lý nguồn nước, cơ sở hạ tầng xanh và gia tăng tài chính khí hậu toàn cầu.\n\nCampuchia đối mặt nguy cơ sụt giảm gần 10% GDP do biến đổi khí hậu \n\n### Campuchia đối mặt nguy cơ sụt giảm gần 10% GDP do biến đổi khí hậu [...] ##### Xã hội\n\n Tin 24h\n Dự báo thời tiết\n Giáo dục\n Dấu ấn VOV\n Việc làm\n Biển đảo\n\n##### Thế giới\n\n Quan sát\n Cuộc sống đó đy\n Hồ sơ\n\n##### Multimedia\n\n Video\n Ảnh\n E-Magazine\n Infographic\n\n##### Kinh tế\n\n Bất động sản\n Khởi nghiệp\n\n##### Thị trường\n\n Giá vàng\n Tiêu dùng\n Tỷ giá\n Chứng khoán\n Giá cà phê\n\n##### Pháp luật\n\n Vụ án\n Tin nóng\n Tư vấn luật\n\n##### Qun sự - Quốc phòng\n\n Vũ khí\n Việt Nam\n Phn tích\n\n##### Thể thao\n\n Bóng đá\n Lịch thi đấu bóng đá\n Thế giới thể thao\n eSports\n Hậu trường",
+                "score": 0.38929167
+              },
+              {
+                "title": "Thời tiết trên sân Mỹ Đình trong trận chung kết lượt về ASEAN Cup ra sao? | Sky Tin",
+                "url": "https://tin.skydoor.net/news/xa-hoi-thoi-tiet-tren-san-my-dinh-trong-tran-chung-ket-luot-ve-8332193",
+                "source": "tin.skydoor.net",
+                "summary": "1 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\n1 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Ông Trump tin CEO Nvidia không biết người tình bị nghi là điệp viên Trung Quốc\n\n2 giờ trước–baogialai.com.vnbaogialai.com.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Vốn hoá 5 công ty công nghệ Mỹ chiếm khoảng 16% GDP toàn cầu [...] Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Thời tiết trên sn Mỹ Đình trong trận chung kết lượt về ASEAN Cup ra sao?\n\nTheo Trung tm Dự báo khí tượng thủy văn quốc gia, thành phố Hà Nội hôm nay (ngày 26/8) vẫn duy trì thời tiết nhiều my, có lúc có mưa\n\nĐọc tin gốc tại 24h.com.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] 2 giờ trước–doanhnhantrevietnam.vndoanhnhantrevietnam.vn\n\nXem tóm tắt nhanh\n\n## Tin tức Xã Hội mới nhất hôm nay\n\n[](\n\n### Trường Chính trị tỉnh Lào Cai đón nhận Hun chương Lao động hạng Nhất\n\n3 giờ trước–baove.congly.vnbaove.congly.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Hội đồng Hòa bình phát cảnh báo khẩn về Dải Gaza\n\n3 giờ trước–baoquocte.vnbaoquocte.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### 1.500 hộ dn Nông Cống ngập su trong lũ\n\n3 giờ trước–24h.com.vn24h.com.vn\n\nXem tóm tắt nhanh\n\n[](",
+                "score": 0.17960283
+              },
+              {
+                "title": "Điện khí hóa, trọng tâm của Hội nghị Khí hậu COP31 tại Thổ Nhĩ Kỳ - RFI",
+                "url": "https://www.rfi.fr/vi/qu%E1%BB%91c-t%E1%BA%BF/20261109-%C4%91i%E1%BB%87n-kh%C3%AD-h%C3%B3a-tr%E1%BB%8Dng-t%C3%A2m-c%E1%BB%A7a-h%E1%BB%99i-ngh%E1%BB%8B-kh%C3%AD-h%E1%BA%ADu-cop31-t%E1%BA%A1i-th%E1%BB%95-nh%C4%A9-k%E1%BB%B3",
+                "source": "rfi.fr",
+                "summary": "Đặc phái viên Jeanne Richard từ Antalya trình bày về những điểm chính trong hội nghị COP31 lần này :\n\n« Sau hơn 30 hội nghị quốc tế về khí hậu, thế giới vẫn chưa thoát khỏi phụ thuộc vào dầu lửa, khí đốt và than đá. Ba loại năng lượng hóa thạch này hiện vẫn chiếm 80 % tiêu thụ năng lượng toàn cầu. Sự phát triển mạnh mẽ của các nguồn năng lượng tái tạo, đặc biệt là phía Trung Quốc chỉ nhằm đáp ứng nhu cầu tiêu thụ ngày càng lớn để phục vụ tăng trưởng kinh tế toàn cầu. [...] Quảng cáo\n\n75 % hiệu ứng nhà kính làm tăng nhiệt độ trêntrái đất là do năng lượng hóa thạch (dầu hỏa, khí đốt và than đá) gy nên. COP31 diễn ra trong bối cảnh cộng đồng quốc tế đang trải qua một cuộc khủng hoảng năng lương nghiêm trọng vì chiến tranh Ukraina và tại Trung Đông. Nhiệt độ trên trái đất tăng mạnh với những hiện tượng « thời tiết cực đoan » xảy ra thường xuyên hơn, gy ra những hậu quả ngày càng nghiêm trọng.",
+                "score": 0.1309177
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "G06_crypto_clarify_then_symbol",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "skill": "multiturn_clarify_crypto",
+        "difficulty": "hard",
+        "what_it_tests": "Multi-turn: hỏi làm rõ symbol coin rồi carry over currency=USDT từ lượt 3."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Kiểm tra giá coin giúp mình"
+        },
+        {
+          "role": "user",
+          "content": "Giá đồng Ethereum"
+        },
+        {
+          "role": "user",
+          "content": "Đơn vị tính bằng USDT nhé"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "crypto_price",
+            "args": {
+              "symbol": "ETH",
+              "currency": "USDT"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "crypto_price",
+            "args": {
+              "symbol": "ETH",
+              "currency": "USDT"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "missing_info",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "crypto_price",
+          "args": {
+            "symbol": "ETH",
+            "currency": "USDT"
+          },
+          "result": {
+            "tool": "crypto_price",
+            "symbol": "ETH",
+            "currency": "USDT",
+            "trading_pair": "ETHUSDT",
+            "price": 2118.15,
+            "price_formatted": "2,118.1500 USDT",
+            "status": "success"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G07_github_search_refinement",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "skill": "multiturn_github_args",
+        "difficulty": "hard",
+        "what_it_tests": "Multi-turn: cập nhật tham số limit=3 và sort=stars qua các lượt phản hồi."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Tìm repo về DeepSeek trên GitHub"
+        },
+        {
+          "role": "user",
+          "content": "Chỉ lấy top 3 repo nhiều sao nhất thôi"
+        },
+        {
+          "role": "user",
+          "content": "Sắp xếp theo stars nhé"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "github_search",
+            "args": {
+              "query": "DeepSeek",
+              "limit": 3,
+              "sort": "stars"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "github_search",
+            "args": {
+              "query": "DeepSeek",
+              "limit": 3,
+              "sort": "stars"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_arg_value",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "github_search",
+          "args": {
+            "query": "DeepSeek",
+            "limit": 3,
+            "sort": "stars"
+          },
+          "result": {
+            "tool": "github_search",
+            "query": "DeepSeek",
+            "total_count": 89907,
+            "items": [
+              {
+                "name": "deepseek-ai/deepseek-harness",
+                "url": "https://github.com/deepseek-ai/deepseek-harness",
+                "description": "DeepSeek Harness: Everything is a Plugin.",
+                "stars": 277784,
+                "language": "TypeScript",
+                "forks": 34088
+              },
+              {
+                "name": "ollama/ollama",
+                "url": "https://github.com/ollama/ollama",
+                "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+                "stars": 186495,
+                "language": "Go",
+                "forks": 18989
+              },
+              {
+                "name": "huggingface/transformers",
+                "url": "https://github.com/huggingface/transformers",
+                "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+                "stars": 168724,
+                "language": "Python",
+                "forks": 35149
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "G08_switch_weather_to_news",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "skill": "multiturn_switch_weather_to_news",
+        "difficulty": "hard",
+        "what_it_tests": "Multi-turn: chuyển tool từ weather sang lookup news, không gọi lại tool cũ."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Thời tiết ở Đà Nẵng thế nào?"
+        },
+        {
+          "role": "user",
+          "content": "Bỏ thời tiết đi, chuyển sang tìm tin tức du lịch Đà Nẵng hôm nay trên web"
+        },
+        {
+          "role": "user",
+          "content": "Đúng rồi, tin mới nhất hôm nay"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "lookup",
+            "args": {
+              "topic": "news",
+              "timeframe": "day"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "lookup",
+            "args": {
+              "query": "du lịch Đà Nẵng",
+              "topic": "news",
+              "timeframe": "day"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "du lịch Đà Nẵng",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "du lịch Đà Nẵng",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Sóng biển Đà Nẵng tung bọt trắng xóa, du khách nước ngoài thích thú check-in - Tuổi Trẻ Online",
+                "url": "https://tuoitre.vn/song-bien-da-nang-tung-bot-trang-xoa-du-khach-nuoc-ngoai-thich-thu-check-in-10026111011355547.htm",
+                "source": "tuoitre.vn",
+                "summary": "Sóng biển bạc đầu nhìn từ bãi biển Mn Thái - Ảnh: ĐOÀN CƯỜNG\n\nTại ven biển đường Hoàng Sa (Đà Nẵng), có nhiều thời điểm nước biển đã tràn qua toàn bộ bãi cát, dng đến sát bờ tường.\n\n #### Hàng trăm người đổ về biển Đà Nẵng chèo sup\n\nĐáng chú ý, dù thời tiết không thuận lợi, khu vực ven biển từ Sơn Trà đến Ngũ Hành Sơn vẫn tấp nập du khách nước ngoài.\n\nTrên vỉa hè phía biển của đường Võ Nguyên Giáp, Hoàng Sa, nhiều nhóm du khách chạy bộ hoặc thong thả dạo chơi. [...] Du khách dạo chơi ở ven biển Đà Nẵng ngày 10-11 - Ảnh: ĐOÀN CƯỜNG\n\nSóng biển Đà Nẵng tung bọt trắng xóa, du khách nước ngoài thích thú check-in - Ảnh 3.\n\nHai du khách nước ngoài chụp hình ở bãi biển Đà Nẵng - Ảnh: ĐOÀN CƯỜNG\n\nTrao đổi với Tuổi Trẻ, lãnh đạo Ban quản lý bán đảo Sơn Trà và các bãi biển du lịch Đà Nẵng cho biết dù thời tiết không thuận lợi nhưng nhiều du khách nước ngoài vẫn muốn khám phá, ngắm cảnh biển Đà Nẵng. [...] Còn ở phía dưới các bãi biển Mỹ Khê, Mỹ An, T20… nhiều nhóm du khách nước ngoài thích thú bấm những tấm hình lưu niệm với hậu cảnh là những đợt sóng cao cuộn trào. Một số người còn cởi giày, dép, đi chn trần dạo trên bãi cát.\n\nÔng Kim (một du khách Hàn Quốc) cho biết đã đến Đà Nẵng du lịch mấy lần và đy là lần đầu ông thấy những đợt sóng biển tung bọt trắng xóa như vậy.\n\nSóng biển Đà Nẵng tung bọt trắng xóa, du khách nước ngoài thích thú check-in - Ảnh 2.",
+                "score": 0.59866416
+              },
+              {
+                "title": "Đà Nẵng cảnh báo rủi ro tại Sơn Trà, khuyến cáo du khách tạm dừng trekking khi mưa lớn",
+                "url": "https://vntravel.org.vn/da-nang-canh-bao-rui-ro-tai-son-tra-khuyen-cao-du-khach-tam-dung-trekking-khi-mua-lon-a10349.html",
+                "source": "vntravel.org.vn",
+                "summary": "Đà Nẵng trên bản đồ xu hướng du lịch 2027: Sức hút từ những trải nghiệm đa sắc\n Đà Nẵng nghiên cứu mở rộng lịch trình diễn Cầu Rồng\n Đà Nẵng đưa ẩm thực trở thành điểm nhấn trong trải nghiệm du lịch quốc tế\n\nSơn Trà   Đà Nẵng   du khách\n\n> VietnamTravel Magazine - Tạp chí Du lịch Việt Nam - Cơ quan ngôn luận của Hiệp hội Du lịch Việt Nam\n\n0 Thích\n\n Chia sẻ Facebook\n Chia sẻ Twitter\n Chia sẻ Pinterest\n\nIn\n\nCùng chủ đề [...] Bán đảo Sơn Trà vốn là lựa chọn quen thuộc của những người yêu thích trải nghiệm ngoài trời tại Đà Nẵng, đặc biệt với các hoạt động đi bộ đường dài, khám phá rừng và ngắm bình minh, hoàng hôn. Tuy nhiên, trong điều kiện mưa lớn, địa hình đồi núi cùng hệ thống đường dốc, suối và thảm thực vật tự nhiên có thể trở thành những yếu tố gy mất an toàn.\n\nBán đảo Sơn Trà trong những ngày mưa lớn (Ảnh: Nguyễn Thành) [...] Từ những cuộc gặp gỡ với bạn bè quốc tế đến hành trình khám phá bản làng, tìm hiểu đời sống người dn địa phương và chuẩn bị những món quà dành tặng trẻ em vùng cao, Cultural Bridge Winter Camp 2026 (Trại mùa đông quốc tế Cultural Bridge 2026 – Cầu nối giao lưu văn hóa dành cho học sinh) hướng đến việc đưa học sinh đến gần hơn với những giá trị văn hóa, tinh thần sẻ chia và trách nhiệm với cộng đồng.\n\n3 giờ trước Balo du lịch\n\nGalaxy Cinema khai trương cụm rạp thứ 32 tại AEON Mall Hạ Long",
+                "score": 0.5853382
+              },
+              {
+                "title": "Đà Nẵng - Auckland thúc đẩy hợp tác công nghệ cao, du lịch và kết nối hàng không | BÁO SÀI GÒN GIẢI PHÓNG",
+                "url": "https://www.sggp.org.vn/da-nang-auckland-thuc-day-hop-tac-cong-nghe-cao-du-lich-va-ket-noi-hang-khong-post880930.html",
+                "source": "sggp.org.vn",
+                "summary": "Bà Desley Simpson đánh giá Đà Nẵng là đô thị năng động, điểm đến du lịch hấp dẫn và trung tm phát triển công nghệ của Việt Nam. Theo bà, Auckland và Đà Nẵng có nhiều điểm tương đồng khi đều là đô thị ven biển, chú trọng chất lượng sống và hướng tới phát triển bền vững. Bà cũng bày tỏ quan tm đến kinh nghiệm của Đà Nẵng trong việc duy trì môi trường sống tốt với chi phí hợp lý, đồng thời mong muốn tăng cường giao lưu nhn dn và hợp tác giáo dục.\n\n 29456.jpg [...] ## Đà Nẵng phn luồng giao thông thi công cụm nút giao cầu Hòa Xun từ ngày 31-10\n\nMột nhà hàng Ấn Độ tại Đà Nẵng phục vụ khách. Ảnh: XUN QUỲNH  \n\n## Đà Nẵng khai phá tiềm năng du lịch Halal\n\nBan Chỉ huy Qun sự phường Hòa Khánh giúp dn trong đêm  \n\n## Đà Nẵng triển khai chống ngập “rốn lũ” đường Mẹ Suốt\n\nTái cấu trúc không gian phát triển đô thị bền vững   \n\n## Tái cấu trúc không gian phát triển đô thị bền vững [...] Du khách đạp xe dạo quanh làng cổ Lộc Yên, khám phá nét bình yên và cảnh sắc mộc mạc của vùng quê xứ Quảng. Ảnh: XUN QUỲNH  \n\n## Đà Nẵng công bố Top 100 điểm chạm năm 2026\n\nĐại học Đà Nẵng vinh danh thủ khoa. Ảnh: XUN QUỲNH  \n\n## Đại học Đà Nẵng vinh danh thủ khoa và nng bước sinh viên",
+                "score": 0.49986795
+              },
+              {
+                "title": "Đà Nẵng cảnh báo người dân, du khách hạn chế lên Sơn Trà do thời tiết xấu",
+                "url": "https://vov.vn/xa-hoi/da-nang-canh-bao-nguoi-dan-du-khach-han-che-len-son-tra-do-thoi-tiet-xau-post1348844.vov",
+                "source": "vov.vn",
+                "summary": "Từ ngày 9-11/11, tại thành phố Đà Nẵng có mưa, có nơi mưa rất to kèm dông, tiềm ẩn nhiều nguy cơ mất an toàn đối với các hoạt động tham quan, du lịch ngoài trời. Ban Quản lý bán đảo Sơn Trà và các bãi biển du lịch Đà Nẵng vừa khuyến cáo người dn, du khách không tham quan, trekking, hiking hoặc di chuyển trên các cung đường bán đảo Sơn Trà khi thời tiết xấu; Chủ động tạm hoãn lịch trình khi có mưa lớn, dông sét; Không di chuyển vào các tuyến đường dốc trơn trượt, khu vực có nguy cơ sạt lở, cy [...] ## VOV.VN - Ban Quản lý bán đảo Sơn Trà và các bãi biển du lịch Đà Nẵng vừa khuyến cáo người dn, du khách chú trọng đảm bảo an toàn khi tham quan bán đảo Sơn Trà trong thời tiết xấu. [...] ##### Giải trí\n\n Nghệ sĩ\n Thời trang\n Sao Việt\n\n##### Du lịch\n\n Tư vấn\n Săn Tour\n check-in\n\n##### Podcast\n\n Cu chuyện thời sự\n Đọc truyện đêm khuya\n Cửa sổ tình yêu\n Kể chuyện cho bé\n Hạt giống tm hồn\n\n##### Cải chính\n\n# Đà Nẵng cảnh báo người dn, du khách hạn chế lên Sơn Trà do thời tiết xấu\n\nThứ Ba, 11:46, 10/11/2026\n\nVOV.VN trên Google News",
+                "score": 0.4773257
+              },
+              {
+                "title": "Mưa lớn, Đà Nẵng cảnh báo du khách không mạo hiểm trekking báo đảo Sơn Trà",
+                "url": "https://thanhnien.vn/mua-lon-da-nang-canh-bao-du-khach-khong-mao-hiem-trekking-bao-dao-son-tra-185261110100430516.htm",
+                "source": "thanhnien.vn",
+                "summary": "Sáng 10.11, trao đổi với PV Thanh Niên, đại diện Ban quản lý bán đảo Sơn Trà và các bãi biển du lịch Đà Nẵng (BQL) cho biết, đơn vị đã phát đi cảnh báo người dn, du khách chú trọng đảm bảo an toàn khi tham quan bán đảo Sơn Trà trong điều kiện thời tiết diễn biến phức tạp.\n\nMưa lớn, Đà Nẵng cảnh báo du khách không mạo hiểm trekking báo đảo Sơn Trà- Ảnh 1. [...] Du lịch\n\n# Mưa lớn, Đà Nẵng cảnh báo du khách không mạo hiểm trekking báo đảo Sơn Trà\n\nHuy Đạt\n\nHuy Đạt- tranhuydat1510@gmail.com\n\nChia sẻ\n\nChọn Báo Thanh Niên làm nguồn ưu tiên trên Google tìm kiếm. Xem hướng dẫn.\n\nBạn muốn Google ưu tiênBạn muốn Google ưu tiênLaptop\n\nBƯỚC1\n\nNhấp vào nút \"Thêm Thanh Niên trên Google\" hoặc mở trực tiếp đường dẫn này:\n\nBƯỚC2\n\nTại trang vừa mở, tìm dòng \"Báo Thanh Niên\" và bấm vào ô vuông bên phải. [...] Lực lượng chức năng khuyến cáo người dn, du khách hạn chế di chuyển trên bán đảo Sơn Trà khi mưa lớn kéo dài để đảm bảo an toàn. Trong ảnh, nhiều tảng đá kích thước lớn sạt trượt ra lòng đường ở bán đảo Sơn Trà trong đợt mưa lớn năm 2025\n\n \n\nẢNH: HUY ĐẠT\n\n \n\nTheo khuyến cáo, người dn và du khách không cố gắng tham quan, trekking, hiking hoặc di chuyển trên các cung đường ở bán đảo Sơn Trà khi có mưa lớn, dông sét; chủ động tạm hoãn lịch trình để đảm bảo an toàn.",
+                "score": 0.4649927
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "G09_calculator_multiturn",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "skill": "multiturn_calculator",
+        "difficulty": "medium",
+        "what_it_tests": "Multi-turn: lưu ngữ cảnh và thực hiện tính toán qua tool calculator."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Doanh thu quý này là 500 triệu, chi phí là 320 triệu"
+        },
+        {
+          "role": "user",
+          "content": "Tính giúp mình tỷ lệ lợi nhuận: (500 - 320) / 500 * 100"
+        },
+        {
+          "role": "user",
+          "content": "Thực hiện phép tính đó đi"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "calculator",
+            "args": {
+              "expression": "(500 - 320) / 500 * 100"
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "calculator",
+            "args": {
+              "expression": "(500 - 320) / 500 * 100"
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_tool",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "calculator",
+          "args": {
+            "expression": "(500 - 320) / 500 * 100"
+          },
+          "result": {
+            "tool": "calculator",
+            "expression": "(500 - 320) / 500 * 100",
+            "result": 36,
+            "status": "success"
+          }
+        }
+      ]
+    },
+    {
+      "id": "G10_confirm_before_send_action",
+      "phase": "B",
+      "suite": "group",
+      "case_suite": "group",
+      "is_multiturn": true,
+      "metadata": {
+        "skill": "multiturn_send_confirmation",
+        "difficulty": "hard",
+        "what_it_tests": "Multi-turn: xin xác nhận trước khi gọi send, và chỉ gọi send khi user đã xác nhận ở lượt 3."
+      },
+      "input": [
+        {
+          "role": "user",
+          "content": "Kiểm tra giá Bitcoin giúp mình"
+        },
+        {
+          "role": "user",
+          "content": "Đăng thông tin giá này lên kênh Telegram giúp mình"
+        },
+        {
+          "role": "user",
+          "content": "Tôi xác nhận đồng ý gửi, hãy đăng ngay"
+        }
+      ],
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "send",
+            "args": {
+              "confirmed": true
+            }
+          }
+        ]
+      },
+      "result": {
+        "passed": true,
+        "routing_correct": true,
+        "args_correct": true,
+        "actual_tool_calls": [
+          {
+            "name": "send",
+            "args": {
+              "text": "Giá Bitcoin hiện tại là: [giá sẽ được cập nhật].",
+              "confirmed": true
+            }
+          }
+        ],
+        "actual_text": null,
+        "case_failure_type": "wrong_boundary",
+        "observed_mismatch": null,
+        "failure_type": null,
+        "failures": []
+      },
+      "tool_results": [
+        {
+          "tool": "send",
+          "args": {
+            "text": "Giá Bitcoin hiện tại là: [giá sẽ được cập nhật].",
+            "confirmed": true
+          },
+          "result": {
+            "tool": "send_telegram",
+            "error": "RuntimeError",
+            "message": "Missing TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID env var"
+          }
+        }
+      ]
+    }
+  ]
+}
