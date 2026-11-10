@@ -1,9 +1,9 @@
-# Báo cáo cá nhân — Nguyễn Trọng Hướng — [Điền MSSV]
+# Báo cáo cá nhân — Nguyễn Trọng Hưởng — 2A202603607
 
 ## 1. Thông tin thành viên
 
-- **Họ tên:** Nguyễn Trọng Hướng
-- **MSSV:** [Điền MSSV của bạn vào đây]
+- **Họ tên:** Nguyễn Trọng Hưởng
+- **MSSV:** 2A202603607
 - **Email:** nguyentronghuong05@gmail.com
 - **Nhóm:** Team 4 (4 Chàng Lính Ngự Lâm)
 - **Repo:** `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`

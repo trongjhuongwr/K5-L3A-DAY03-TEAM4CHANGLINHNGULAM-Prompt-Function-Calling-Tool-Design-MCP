@@ -12,10 +12,10 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Nguyễn Trọng Hướng | [Điền MSSV] | nguyentronghuong05@gmail.com | [trongjhuongwr](https://github.com/trongjhuongwr) | Trưởng nhóm / Core Architect |
+|   1 | Nguyễn Trọng Hưởng | 2A202603607 | nguyentronghuong05@gmail.com | [trongjhuongwr](https://github.com/trongjhuongwr) | Trưởng nhóm / Core Architect |
 |   2 | Đàm Tuấn Linh | 2A202603624 | damlinh820@gmail.com | [damlinh820](https://github.com/damlinh820) | Research & Evidence Specialist |
 |   3 | Lê Thành Đạt | 2A202603579 | 26ai.datlt7@vinuni.edu.vn | [datlt203357](https://github.com/datlt203357) | UI & Testing Specialist |
-|   4 | Trung Quân | [Điền MSSV] | trungquana123@gmail.com | [Jaden](https://github.com/trungquana123) | Content Analysis Specialist |
+|   4 | Phạm Ngọc Trung Quân | 2A202603626 | trungquana123@gmail.com | [Jaden](https://github.com/trungquana123) | Content Analysis Specialist |
 
 ## Cá nhân
 
@@ -23,8 +23,8 @@ Mỗi thành viên đồng thời tạo một báo cáo riêng trong `report/tea
 
 ---
 
-## 1. NguyenTrongHuong-[MSSV]
-- **File báo cáo:** [report/team/MSSV_NguyenTrongHuong.md](report/team/MSSV_NguyenTrongHuong.md)
+## 1. NguyenTrongHuong-2A202603607
+- **File báo cáo:** [report/team/2A202603607_NguyenTrongHuong.md](report/team/2A202603607_NguyenTrongHuong.md)
 
 ### Phần việc phụ trách
 - Kiến trúc hệ thống cốt lõi (Core Pipeline & Tooling).
@@ -83,8 +83,8 @@ Mỗi thành viên đồng thời tạo một báo cáo riêng trong `report/tea
 
 ---
 
-## 4. TrungQuan-[MSSV]
-- **File báo cáo:** [report/team/MSSV_TrungQuan.md](report/team/MSSV_TrungQuan.md)
+## 4. PhamNgocTrungQuan-2A202603626
+- **File báo cáo:** [report/team/2A202603626_PhamNgocTrungQuan.md](report/team/2A202603626_PhamNgocTrungQuan.md)
 
 ### Phần việc phụ trách
 - Phát triển 3 công cụ phân tích nội dung: `compare`, `sentiment`, `summarize_thread`.

@@ -14,10 +14,10 @@
 - **Lớp:** L3A
 - **Repo:** `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`
 - **Thành viên và phân công:** xem chi tiết tại [TEAM.md](../../TEAM.md)
-  1. Nguyễn Trọng Hướng — Trưởng nhóm / Core Architect ([MSSV_NguyenTrongHuong.md](MSSV_NguyenTrongHuong.md))
+  1. Nguyễn Trọng Hưởng (MSSV: 2A202603607) — Trưởng nhóm / Core Architect ([2A202603607_NguyenTrongHuong.md](2A202603607_NguyenTrongHuong.md))
   2. Đàm Tuấn Linh (MSSV: 2A202603624) — Research & Evidence Specialist ([2A202603624_DamTuanLinh.md](2A202603624_DamTuanLinh.md))
   3. Lê Thành Đạt (MSSV: 2A202603579) — UI & Testing Specialist ([2A202603579_LeThanhDat.md](2A202603579_LeThanhDat.md))
-  4. Trung Quân — Content Analysis Specialist ([MSSV_TrungQuan.md](MSSV_TrungQuan.md))
+  4. Phạm Ngọc Trung Quân (MSSV: 2A202603626) — Content Analysis Specialist ([2A202603626_PhamNgocTrungQuan.md](2A202603626_PhamNgocTrungQuan.md))
 - **Provider / model dùng cho v0–v3:** OpenRouter / `openai/gpt-4o-mini` (và kiểm chứng chéo với OpenAI provider).
 
 ---
@@ -183,10 +183,10 @@ Trích xuất từ 7 file transcripts thực tế trong thư mục [starter_v0/t
 ## 6. Tổng hợp đóng góp
 
 Chi tiết đóng góp cụ thể và các file bằng chứng của từng thành viên được ghi nhận tại [TEAM.md](../../TEAM.md) và trong các báo cáo cá nhân:
-- Nguyễn Trọng Hướng: [report/team/MSSV_NguyenTrongHuong.md](MSSV_NguyenTrongHuong.md)
+- Nguyễn Trọng Hưởng: [report/team/2A202603607_NguyenTrongHuong.md](2A202603607_NguyenTrongHuong.md)
 - Đàm Tuấn Linh: [report/team/2A202603624_DamTuanLinh.md](2A202603624_DamTuanLinh.md)
 - Lê Thành Đạt: [report/team/2A202603579_LeThanhDat.md](2A202603579_LeThanhDat.md)
-- Trung Quân: [report/team/MSSV_TrungQuan.md](MSSV_TrungQuan.md)
+- Phạm Ngọc Trung Quân: [report/team/2A202603626_PhamNgocTrungQuan.md](2A202603626_PhamNgocTrungQuan.md)
 
 ---
 
