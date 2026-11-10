@@ -1,3 +1,5 @@
 version,author,changed_artifact,artifact_version,prompt_hash,tools_hash,reason,hypothesis,metric_before,metric_after,run_file
 v0,team,baseline,v0+peb1c8179815b+t5b22a2476d41,eb1c8179815b,5b22a2476d41,baseline,Đo hành vi chưa tối ưu của starter prompt và tool declaration gốc,,0.65,runs/v0_B_base_openrouter_20261110T105123112923.json
 v1,team,system_prompt.md,v1+pd85e567c3637+tcbf368e0ab8d,d85e567c3637,cbf368e0ab8d,Chặn đoán mò và bổ sung quy tắc routing,Kỳ vọng giải quyết 7 case fail của v0 đưa accuracy lên >80%,0.65,0.85,runs/v1_B_base_openrouter_20261110T112216959209.json
+v2,team,system_prompt.md,v2+p102b05f492d2+t36edf847cf79,102b05f492d2,36edf847cf79,Chống over-clarify và map tên handle,Kỳ vọng sửa lỗi fetch trực tiếp khi có URL và map Sam Altman,0.85,0.95,runs/v2_B_base_openrouter_20261110T113251759897.json
+v3,team,system_prompt.md,v3+p2a661719cca5+tb2c724c97c8a,2a661719cca5,b2c724c97c8a,Tôn trọng chuyển đổi công cụ multi-turn và hỗ trợ 4 tool mới,Kỳ vọng giải quyết M06 đưa accuracy lên 100% và qua 10/10 group eval,0.95,1.00,runs/v3_B_base_openrouter_20261110T155932076825.json
