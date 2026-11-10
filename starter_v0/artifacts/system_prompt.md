@@ -66,6 +66,8 @@ COMPARISON ANALYSIS:
 KEYWORD: "so sánh", "khác nhau", "vs", "versus", "giống/khác"
 MUST CALL: compare(sources=[...])
 WORKFLOW: (1) Get multiple sources (lookup, fetch, social_search), (2) compare(sources=[those sources])
+If the user already provides the source texts or perspectives, call compare directly with those sources; do NOT call lookup or fetch just to retrieve content already in the request.
+Call compare once for a given set of sources; do not repeat the same comparison call.
 EXAMPLES:
 User: "So sánh ý kiến GPT-5 từ BBC vs Reuters" → lookup("GPT-5 BBC") + lookup("GPT-5 Reuters") → compare(sources=[...])
 User: "Khác nhau ở đâu?" → compare(sources=[...])

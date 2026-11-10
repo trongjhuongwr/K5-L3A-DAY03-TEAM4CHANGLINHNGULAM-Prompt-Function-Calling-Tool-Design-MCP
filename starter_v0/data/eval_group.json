@@ -1,179 +1,71 @@
 {
   "dataset_id": "day04_v2_research_group",
   "dataset_role": "group",
-  "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
+  "description": "Six team-authored cases: three single-turn and three multi-turn, covering calculator, sentiment, and compare tool routing and arguments.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": [{
-      "id": "G01_calculator_basic",
+  "cases": [
+    {
+      "id": "G01_calculator_single_turn",
       "phase": "B",
       "suite": "group",
       "query": "Tính giúp tôi biểu thức 15 * 8 + 42 / 2",
       "failure_type": "wrong_arg_value",
-      "expect": {
-        "tool_calls": [
-          {
-            "name": "calculator",
-            "args": {
-              "expression": "15 * 8 + 42 / 2"
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "category": "calculator",
-        "difficulty": "easy",
-        "description": "Kiểm tra khả năng nhận diện yêu cầu tính toán và truyền biểu thức."
-      }
+      "expect": {"tool_calls": [{"name": "calculator", "args": {"expression": "15 * 8 + 42 / 2"}}]},
+      "metadata": {"what_it_tests": "Single-turn: nhận diện phép tính và truyền nguyên biểu thức vào calculator.", "tool": "calculator"}
     },
     {
-      "id": "G02_calculator_functions",
+      "id": "G02_sentiment_single_turn",
       "phase": "B",
       "suite": "group",
-      "query": "Tính căn bậc hai của 144 bằng công cụ tính toán",
+      "query": "Gộp hai bình luận vào một lần phân tích cảm xúc: 'Sản phẩm rất tốt và hữu ích' và 'Ứng dụng thường xuyên bị lỗi'.",
       "failure_type": "wrong_arg_value",
-      "expect": {
-        "tool_calls": [
-          {
-            "name": "calculator",
-            "args": {
-              "expression": "sqrt(144)"
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "category": "calculator",
-        "difficulty": "medium",
-        "description": "Kiểm tra khả năng sử dụng hàm toán học được hỗ trợ."
-      }
+      "expect": {"tool_calls": [{"name": "sentiment", "args": {"items": [{"text": "Sản phẩm rất tốt và hữu ích"}, {"text": "Ứng dụng thường xuyên bị lỗi"}]}}]},
+      "metadata": {"what_it_tests": "Single-turn: gọi sentiment và tách đúng hai văn bản đầu vào.", "tool": "sentiment"}
     },
     {
-      "id": "G03_sentiment_basic",
+      "id": "G03_compare_single_turn",
       "phase": "B",
       "suite": "group",
-      "query": "Phân tích cảm xúc của hai nội dung sau: Sản phẩm rất tốt và hữu ích. Ứng dụng thường xuyên bị lỗi.",
+      "query": "So sánh hai nguồn sau: Nguồn A: AI giúp cá nhân hóa việc học. Nguồn B: AI hỗ trợ giáo viên và cá nhân hóa trải nghiệm học tập.",
+      "failure_type": "unnecessary_tool",
+      "expect": {"tool_calls": [{"name": "compare", "args": {"sources": [{"title": "Nguồn A", "content": "AI giúp cá nhân hóa việc học."}, {"title": "Nguồn B", "content": "AI hỗ trợ giáo viên và cá nhân hóa trải nghiệm học tập."}]}}]},
+      "metadata": {"what_it_tests": "Single-turn: nhận diện yêu cầu so sánh và trích xuất hai nguồn.", "tool": "compare"}
+    },
+    {
+      "id": "G04_calculator_multi_turn",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tính giúp tôi 144 chia cho 3"},
+        {"role": "user", "content": "À, hãy tính căn bậc hai của kết quả đó"}
+      ],
       "failure_type": "wrong_arg_value",
-      "expect": {
-        "tool_calls": [
-          {
-            "name": "sentiment",
-            "args": {
-              "items": [
-                {
-                  "text": "Sản phẩm rất tốt và hữu ích"
-                },
-                {
-                  "text": "Ứng dụng thường xuyên bị lỗi"
-                }
-              ],
-              "summary_style": "brief"
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "category": "sentiment",
-        "difficulty": "easy",
-        "description": "Kiểm tra khả năng nhận diện yêu cầu phân tích cảm xúc."
-      }
+      "expect": {"tool_calls": [{"name": "calculator", "args": {"expression": "sqrt(144 / 3)"}}]},
+      "metadata": {"what_it_tests": "Multi-turn: dùng phép tính và số liệu ở lượt trước, áp dụng yêu cầu căn bậc hai ở lượt mới.", "tool": "calculator"}
     },
     {
-      "id": "G04_sentiment_multiple",
+      "id": "G05_sentiment_multi_turn",
       "phase": "B",
       "suite": "group",
-      "query": "Hãy phân tích cảm xúc của các bình luận: Tôi rất hài lòng với dịch vụ. Chất lượng quá tệ. Sản phẩm bình thường.",
+      "turns": [
+        {"role": "user", "content": "Phân tích cảm xúc bình luận 'Tôi rất hài lòng với dịch vụ'"},
+        {"role": "user", "content": "Thêm bình luận 'Chất lượng quá tệ' vào cùng lần phân tích, dùng kiểu detailed nhé"}
+      ],
       "failure_type": "wrong_arg_value",
-      "expect": {
-        "tool_calls": [
-          {
-            "name": "sentiment",
-            "args": {
-              "items": [
-                {
-                  "text": "Tôi rất hài lòng với dịch vụ"
-                },
-                {
-                  "text": "Chất lượng quá tệ"
-                },
-                {
-                  "text": "Sản phẩm bình thường"
-                }
-              ],
-              "summary_style": "brief"
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "category": "sentiment",
-        "difficulty": "medium",
-        "description": "Kiểm tra phân tích nhiều nội dung cùng lúc."
-      }
+      "expect": {"tool_calls": [{"name": "sentiment", "args": {"items": [{"text": "Tôi rất hài lòng với dịch vụ"}, {"text": "Chất lượng quá tệ"}], "summary_style": "detailed"}}]},
+      "metadata": {"what_it_tests": "Multi-turn: giữ bình luận trước, thêm bình luận mới và cập nhật summary_style.", "tool": "sentiment"}
     },
     {
-      "id": "G05_compare_basic",
+      "id": "G06_compare_multi_turn",
       "phase": "B",
       "suite": "group",
-      "query": "So sánh hai nguồn thông tin sau về AI trong giáo dục: Nguồn A: AI giúp cá nhân hóa việc học và cải thiện kết quả giáo dục. Nguồn B: AI hỗ trợ giáo viên và cá nhân hóa trải nghiệm học tập.",
-      "failure_type": "wrong_tool",
-      "expect": {
-        "tool_calls": [
-          {
-            "name": "compare",
-            "args": {
-              "sources": [
-                {
-                  "title": "Nguồn A",
-                  "content": "AI giúp cá nhân hóa việc học và cải thiện kết quả giáo dục"
-                },
-                {
-                  "title": "Nguồn B",
-                  "content": "AI hỗ trợ giáo viên và cá nhân hóa trải nghiệm học tập"
-                }
-              ]
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "category": "compare",
-        "difficulty": "easy",
-        "description": "Kiểm tra khả năng nhận diện yêu cầu so sánh nhiều nguồn."
-      }
-    },
-    {
-      "id": "G06_compare_dimensions",
-      "phase": "B",
-      "suite": "group",
-      "query": "So sánh hai nguồn sau theo các tiêu chí nội dung và quan điểm: Nguồn A: Công nghệ AI giúp tự động hóa công việc và tiết kiệm thời gian. Nguồn B: AI có thể tăng năng suất nhưng cần kiểm soát rủi ro.",
-      "failure_type": "wrong_tool",
-      "expect": {
-        "tool_calls": [
-          {
-            "name": "compare",
-            "args": {
-              "sources": [
-                {
-                  "title": "Nguồn A",
-                  "content": "Công nghệ AI giúp tự động hóa công việc và tiết kiệm thời gian"
-                },
-                {
-                  "title": "Nguồn B",
-                  "content": "AI có thể tăng năng suất nhưng cần kiểm soát rủi ro"
-                }
-              ],
-              "dimensions": [
-                "nội dung",
-                "quan điểm"
-              ]
-            }
-          }
-        ]
-      },
-      "metadata": {
-        "category": "compare",
-        "difficulty": "medium",
-        "description": "Kiểm tra khả năng truyền thêm tiêu chí so sánh."
-      }
-    }]
+      "turns": [
+        {"role": "user", "content": "So sánh hai nguồn: Nguồn A: AI giúp tự động hóa công việc và tiết kiệm thời gian. Nguồn B: AI tăng năng suất nhưng cần kiểm soát rủi ro."},
+        {"role": "user", "content": "So sánh chúng theo hai tiêu chí content và tone"}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "compare", "args": {"sources": [{"title": "Nguồn A", "content": "AI giúp tự động hóa công việc và tiết kiệm thời gian."}, {"title": "Nguồn B", "content": "AI tăng năng suất nhưng cần kiểm soát rủi ro."}], "dimensions": ["content", "tone"]}}]},
+      "metadata": {"what_it_tests": "Multi-turn: mang hai nguồn từ lượt trước và truyền các tiêu chí được bổ sung.", "tool": "compare"}
+    }
+  ]
 }

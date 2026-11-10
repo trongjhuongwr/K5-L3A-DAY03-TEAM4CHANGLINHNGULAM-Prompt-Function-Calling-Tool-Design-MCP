@@ -145,7 +145,7 @@ tools:
       required: []
 
   - name: compare
-    description: "So sánh 2-3 sources/articles/perspectives trên cùng một topic. Tìm điểm giống/khác, xung đột, consensus. Dùng khi cần đối chiếu nhiều nguồn để xác minh thông tin."
+    description: "So sánh trực tiếp 2-3 nguồn, đoạn văn hoặc quan điểm để tìm điểm giống/khác. Nếu người dùng đã cung cấp nội dung, gọi compare ngay và KHÔNG gọi lookup/fetch để lấy lại nội dung đó. Chỉ dùng lookup/fetch trước khi compare khi cần tự tìm nội dung nguồn mà người dùng chưa cung cấp."
     parameters:
       type: object
       properties:

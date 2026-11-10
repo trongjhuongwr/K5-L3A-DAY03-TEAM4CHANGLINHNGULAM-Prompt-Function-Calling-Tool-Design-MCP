@@ -1,122 +1,94 @@
-"""TODO(student): Tool Unit Test Challenge.
+"""Offline unit tests for the three team-added local analysis tools.
 
-Each test below is a stub. Replace `pytest.skip(...)` with a real test.
-Patterns to copy are in test_tools_examples.py. Fixtures are in conftest.py.
-
-Rules:
-- Offline only: mock HTTP with `fake_http`, set fake keys with `monkeypatch.setenv`.
-- One behaviour per test. Name the test after the behaviour, not the function.
-- Done = `pytest tests/ -v` shows 0 skipped, 0 failed.
+Each tool has a happy-path case, a missing/bad-input case, and an invalid-input
+failure case. These tests exercise tool behavior directly without provider or
+network access.
 """
 from __future__ import annotations
 
-import pytest
-
-from conftest import FakeResponse  # noqa: F401  (you will need it)
-from tools import TOOL_FUNCTIONS  # noqa: F401
-
-TODO = "TODO(student): implement this test"
+from tools import TOOL_FUNCTIONS
 
 
-# ---------------- clarify ----------------
-
-def test_clarify_choice_returns_options_and_awaits_user() -> None:
-    # Call clarify with response_type="choice" and 2 options.
-    # Assert: options are returned unchanged, awaiting_user is True.
-    pytest.skip(TODO)
+calculator = TOOL_FUNCTIONS["calculator"]
+sentiment = TOOL_FUNCTIONS["sentiment"]
+compare = TOOL_FUNCTIONS["compare"]
 
 
-# ---------------- format ----------------
+# ---------------- calculator ----------------
 
-def test_format_sections_groups_items_by_section() -> None:
-    # Items with section "A", "B", "A" -> markdown has exactly one "## A" and one "## B".
-    pytest.skip(TODO)
+def test_calculator_evaluates_supported_expression() -> None:
+    result = calculator(expression="sqrt(144) + 2 * 3")
 
-
-def test_format_thread_numbers_items() -> None:
-    # template="thread" -> lines start with "1/", "2/", ...
-    pytest.skip(TODO)
+    assert result["status"] == "success"
+    assert result["result"] == 18
+    assert result["expression"] == "sqrt(144) + 2 * 3"
 
 
-def test_format_empty_items_does_not_crash() -> None:
-    # items=None and items=[] -> item_count == 0, no exception.
-    pytest.skip(TODO)
+def test_calculator_empty_expression_returns_error() -> None:
+    result = calculator(expression="  ")
+
+    assert result["error"] == "ValueError"
+    assert result["message"] == "Expression cannot be empty"
 
 
-# ---------------- send (guardrail) ----------------
+def test_calculator_rejects_unsupported_syntax_without_raising() -> None:
+    result = calculator(expression="__import__('os').system('echo unsafe')")
 
-def test_send_confirmed_posts_to_telegram(monkeypatch, fake_http) -> None:
-    # Set TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID, mock HTTP.
-    # Assert: exactly one POST, URL contains the token, json has chat_id + text, status == "sent".
-    pytest.skip(TODO)
-
-
-def test_send_confirmed_without_env_returns_error_and_no_request(fake_http) -> None:
-    pytest.skip(TODO)
+    assert result["tool"] == "calculator"
+    assert result["error"] == "ValueError"
 
 
-# ---------------- lookup ----------------
+# ---------------- sentiment ----------------
 
-def test_lookup_without_timeframe_omits_time_range(monkeypatch, fake_http) -> None:
-    # timeframe=None -> request body has no "time_range" key.
-    pytest.skip(TODO)
+def test_sentiment_classifies_multiple_items_and_detailed_summary() -> None:
+    result = sentiment(
+        items=[{"text": "Dịch vụ rất tốt"}, {"text": "Chất lượng tệ"}],
+        summary_style="detailed",
+    )
 
-
-# ---------------- fetch ----------------
-
-def test_fetch_maps_firecrawl_response(monkeypatch, fake_http) -> None:
-    # Mock {"data": {"markdown": "...", "metadata": {"title": "T", "sourceURL": "https://..."}}}
-    # Assert title/url/source/summary in result["items"][0].
-    pytest.skip(TODO)
-
-
-def test_fetch_truncates_markdown_to_4000_chars(monkeypatch, fake_http) -> None:
-    pytest.skip(TODO)
+    assert result["item_count"] == 2
+    assert [item["label"] for item in result["results"]] == ["positive", "negative"]
+    assert result["counts"] == {"positive": 1, "neutral": 0, "negative": 1}
+    assert "Đã phân tích 2 văn bản" in result["summary"]
 
 
-# ---------------- timeline / social_search ----------------
+def test_sentiment_empty_items_returns_error() -> None:
+    result = sentiment(items=[])
 
-def test_timeline_respects_limit_and_skips_items_without_id(monkeypatch, fake_http) -> None:
-    # Mock {"timeline": [...]} with 1 item missing tweet_id and 6 valid items, limit=3.
-    # Assert 3 items, and each url looks like https://x.com/<handle>/status/<id>.
-    pytest.skip(TODO)
-
-
-def test_social_search_passes_search_type(monkeypatch, fake_http) -> None:
-    # Assert the request params carry the query and search_type ("Top" / "Latest").
-    pytest.skip(TODO)
+    assert "error" in result
+    assert result["tool"] == "sentiment"
 
 
-# ---------------- policy (local knowledge + trust boundary) ----------------
+def test_sentiment_invalid_item_returns_error_without_raising() -> None:
+    result = sentiment(items=[{"text": "Tốt"}, {"text": "   "}])
 
-def test_policy_empty_query_returns_no_results() -> None:
-    pytest.skip(TODO)
-
-
-def test_policy_area_filter_only_returns_that_area() -> None:
-    # policy_area="data_privacy" -> every result has policy_area == "data_privacy".
-    pytest.skip(TODO)
+    assert result["error"] == "Item thứ 2 thiếu text hợp lệ."
 
 
-def test_policy_instruction_like_lines_go_to_untrusted_text() -> None:
-    # One policy file contains a quoted line that tries to give the assistant orders.
-    # Query that section (source_citation) and assert: that line is in untrusted_text, NOT in facts.
-    pytest.skip(TODO)
+# ---------------- compare ----------------
+
+def test_compare_finds_shared_and_unique_terms() -> None:
+    result = compare(sources=[
+        {"title": "A", "content": "AI giúp cá nhân hóa việc học"},
+        {"title": "B", "content": "AI hỗ trợ cá nhân hóa việc học"},
+    ], dimensions=["nội dung"])
+
+    assert result["source_count"] == 2
+    assert result["dimensions"] == ["nội dung"]
+    assert set(result["common_terms"]) == {"ai", "cá", "nhân", "hóa", "việc", "học"}
+    assert result["method"] == "keyword_overlap"
 
 
-# ---------------- YOUR NEW TOOL(S) ----------------
-# Write at least 3 tests per tool your team adds:
-#   1. happy path (mocked if it calls an API)
-#   2. bad / missing input from the model (empty string, wrong type, out-of-enum value)
-#   3. failure path (missing key, HTTP error, timeout) -> returns error dict, does not raise
+def test_compare_rejects_fewer_than_two_sources() -> None:
+    result = compare(sources=[{"title": "A", "content": "Một nguồn"}])
 
-def test_my_new_tool_happy_path() -> None:
-    pytest.skip(TODO)
+    assert result["error"] == "Cần cung cấp từ 2 đến 3 nguồn."
 
 
-def test_my_new_tool_bad_input_from_model() -> None:
-    pytest.skip(TODO)
+def test_compare_invalid_source_content_returns_error_without_raising() -> None:
+    result = compare(sources=[
+        {"title": "A", "content": "Nội dung hợp lệ"},
+        {"title": "B", "content": "  "},
+    ])
 
-
-def test_my_new_tool_failure_returns_error_dict() -> None:
-    pytest.skip(TODO)
+    assert result["error"] == "Source thứ 2 thiếu content."

@@ -101,7 +101,16 @@ def normalize_value(value: Any) -> Any:
     if isinstance(value, str):
         return value.strip().lower()
     if isinstance(value, list):
-        return sorted(normalize_value(item) for item in value)
+        normalized = [normalize_value(item) for item in value]
+        # Lists can contain objects (for example sentiment items/sources), which
+        # Python cannot sort directly. Canonical JSON keys make comparison
+        # order-insensitive while supporting nested dictionaries and lists.
+        return sorted(
+            normalized,
+            key=lambda item: json.dumps(item, sort_keys=True, ensure_ascii=False),
+        )
+    if isinstance(value, dict):
+        return {key: normalize_value(item) for key, item in value.items()}
     return value
 
 
@@ -121,12 +130,41 @@ def compare_subset(expected: dict[str, Any], actual: dict[str, Any]) -> tuple[bo
             actual_set = set(normalize_value(actual_value or []))
             ok = expected_set.issubset(actual_set)
         else:
-            ok = normalize_value(actual_value) == normalize_value(expected_value)
+            ok = matches_expected(expected_value, actual_value)
         if ok:
             correct += 1
         else:
             failures.append(f"{key}: expected {expected_value!r}, got {actual_value!r}")
     return len(failures) == 0, failures, correct, total
+
+
+def matches_expected(expected: Any, actual: Any) -> bool:
+    """Match expected argument fields recursively, allowing harmless extra metadata.
+
+    Lists remain the same length and are order-insensitive. This lets eval cases
+    check the meaningful fields of nested tool arguments without failing on
+    optional fields such as source labels returned by the model.
+    """
+    if isinstance(expected, dict):
+        return isinstance(actual, dict) and all(
+            key in actual and matches_expected(value, actual[key])
+            for key, value in expected.items()
+        )
+    if isinstance(expected, list):
+        if not isinstance(actual, list) or len(expected) != len(actual):
+            return False
+
+        def match_remaining(index: int, remaining: list[Any]) -> bool:
+            if index == len(expected):
+                return not remaining
+            return any(
+                matches_expected(expected[index], item)
+                and match_remaining(index + 1, remaining[:item_index] + remaining[item_index + 1:])
+                for item_index, item in enumerate(remaining)
+            )
+
+        return match_remaining(0, actual)
+    return normalize_value(expected) == normalize_value(actual)
 
 
 def best_arg_match(expected_args: dict[str, Any], actual_calls: list[tuple[int, dict[str, Any]]]) -> tuple[int, list[str], int, int] | None:
