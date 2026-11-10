@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from providers.base import Provider, ToolCall
+from runtime_context import current_date_context
 from tools import TOOL_FUNCTIONS
 
 
@@ -29,7 +30,11 @@ class ResearchAgent:
         self.model = model
 
     def run(self, user_messages: list[dict[str, str]], *, tool_choice: Any | None = None) -> AgentRun:
-        messages = [{"role": "system", "content": self.system_prompt}, *user_messages]
+        messages = [
+            {"role": "system", "content": self.system_prompt},
+            {"role": "system", "content": current_date_context()},
+            *user_messages,
+        ]
         response = self.provider.complete(
             messages,
             self.tools,

@@ -48,13 +48,13 @@ Bonus:
 - [*] `pytest` chạy được: contract test + example test xanh, TODO test đang `skipped`
 
 **Prompt & tool declaration**
-- [*] Chạy baseline `v0`, ghi vào `artifacts/version_log.csv`
-- [*] Liệt kê các case FAIL của `v0` và gán mỗi case một loại lỗi (`wrong_tool`, `wrong_arg_value`, `missing_info`...) 
-- [ ] `artifacts/system_prompt.md`: bỏ các chỉ dẫn xấu cố ý của starter (đoán thay vì hỏi, gửi không cần xác nhận, ép một bước)
-- [ ] `artifacts/system_prompt.md`: thêm rule routing (khi nào `timeline` / `social_search` / `lookup` / `fetch` / `clarify`)
-- [ ] `artifacts/tools.yaml`: viết lại `description` mỗi tool: làm gì, **khi nào dùng / khi nào không dùng**
-- [ ] `artifacts/tools.yaml`: mô tả rõ convention args (handle không có `@`, `topic=news` cho tin tức, `timeframe`, `search_type=Top|Latest`)
-- [ ] `artifacts/tools.yaml`: `send` mô tả rõ chỉ gửi khi user đã xác nhận (`confirmed=true`)
+- [*] Chạy baseline `v0`, ghi vào `artifacts/version_log.csv` 
+- [*] Liệt kê các case FAIL của `v0` và gán mỗi case một loại lỗi (`wrong_tool`, `wrong_arg_value`, `missing_info`...) (file code gán lỗi)[analyze_v0.py]
+- [*] `artifacts/system_prompt.md`: bỏ các chỉ dẫn xấu cố ý của starter (đoán thay vì hỏi, gửi không cần xác nhận, ép một bước)
+- [*] `artifacts/system_prompt.md`: thêm rule routing (khi nào `timeline` / `social_search` / `lookup` / `fetch` / `clarify`)
+- [*] `artifacts/tools.yaml`: viết lại `description` mỗi tool: làm gì, **khi nào dùng / khi nào không dùng**
+- [*] `artifacts/tools.yaml`: mô tả rõ convention args (handle không có `@`, `topic=news` cho tin tức, `timeframe`, `search_type=Top|Latest`)
+- [*] `artifacts/tools.yaml`: `send` mô tả rõ chỉ gửi khi user đã xác nhận (`confirmed=true`)
 - [ ] `v1`, `v2`, `v3`: mỗi version **một** giả thuyết, metric trước/sau trong `version_log.csv`
 
 **Tool mới**
@@ -132,6 +132,13 @@ Bonus tools:
 - `paper_text`: tải PDF arXiv và trích text cục bộ.
 
 Mỗi tool nằm trong thư mục riêng dưới `starter_v0/tools/<tool_name>/`.
+
+Team đã bổ sung `recent_timeline`, `resolve_account`, `deduplicate_news` và
+`cross_check_claim`. Chức năng, giới hạn và lệnh thử nằm trong
+[TOOLS_EXTENSION.md](starter_v0/artifacts/TOOLS_EXTENSION.md). Ba case routing mới
+G11–G13 đạt 3/3 bằng OpenRouter; suite offline hiện đạt 132 passed. Có thể chạy riêng
+các case này bằng `python scripts/eval_research_tools.py --provider openrouter --version tools-v1`
+từ `starter_v0/`; script này không chạy case gửi Telegram.
 
 ## ⚠️ Nếu nhóm đổi tên tool: phải đồng bộ
 

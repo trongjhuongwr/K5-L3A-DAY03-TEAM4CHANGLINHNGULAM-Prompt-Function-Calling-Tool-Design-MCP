@@ -10,6 +10,7 @@ from typing import Any
 from env_loader import load_lab_env
 from providers import make_provider
 from providers.base import ToolCall
+from runtime_context import current_date_context
 from tools import TOOL_FUNCTIONS, load_tool_declarations, to_openai_tools
 from versioning import artifact_version_dict, build_artifact_version
 
@@ -62,7 +63,10 @@ def tool_results_message(events: list[dict[str, Any]]) -> dict[str, str]:
         "content": (
             "TOOL_RESULTS_JSON:\n"
             f"{json_text(events, max_chars=24000)}\n\n"
-            "Use only these tool results. If the user asked for a digest and the items are ready, "
+            "Use collected tool results from this conversation. Pass actual returned data to dependent tools; do not invent missing items. "
+            "If a prerequisite tool fails, explain the failure rather than inventing data for the next tool. "
+            "If the user asked to deduplicate, call deduplicate_news on the available items before formatting. "
+            "If the user asked for a digest and the items are ready, "
             "call the formatting tool. Otherwise answer the user directly with cited sources when available."
         ),
     }
@@ -86,6 +90,9 @@ def run_model_tool_loop(
     max_tool_rounds: int,
 ) -> dict[str, Any]:
     working_messages = list(messages)
+    runtime_context = current_date_context()
+    insertion_index = 1 if working_messages and working_messages[0]["role"] == "system" else 0
+    working_messages.insert(insertion_index, {"role": "system", "content": runtime_context})
     rounds: list[dict[str, Any]] = []
     all_tool_events: list[dict[str, Any]] = []
 
@@ -94,6 +101,7 @@ def run_model_tool_loop(
         calls = response.tool_calls
         round_record: dict[str, Any] = {
             "round": round_index,
+            "runtime_context": runtime_context,
             "assistant_text": response.text,
             "tool_calls": [{"name": call.name, "args": call.args} for call in calls],
             "tool_results": [],
@@ -158,7 +166,7 @@ def main() -> None:
     parser.add_argument("--tools", type=Path, default=ARTIFACTS_DIR / "tools.yaml")
     parser.add_argument("--transcripts-dir", type=Path, default=ROOT / "transcripts")
     parser.add_argument("--history-window", type=int, default=5, help="Keep the last N user/assistant pairs in context.")
-    parser.add_argument("--max-tool-rounds", type=int, default=4)
+    parser.add_argument("--max-tool-rounds", type=int, default=6)
     args = parser.parse_args()
 
     system_prompt = args.system_prompt.read_text(encoding="utf-8")
