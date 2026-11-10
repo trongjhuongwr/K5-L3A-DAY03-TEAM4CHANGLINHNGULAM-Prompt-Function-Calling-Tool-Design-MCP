@@ -1,0 +1,71 @@
+{
+  "dataset_id": "research_tools_extension",
+  "dataset_role": "group",
+  "description": "Read-only routing subset G11-G13; does not exercise send.",
+  "allowed_failure_types": [
+    "wrong_tool",
+    "wrong_arg_value",
+    "wrong_boundary",
+    "unnecessary_tool",
+    "out_of_scope",
+    "missing_info"
+  ],
+  "cases": [
+    {
+      "id": "G11_resolve_account_directory",
+      "phase": "B",
+      "query": "Tra handle X của Andrej Karpathy trong danh mục tài khoản và cho tôi nguồn đối chiếu, chưa lấy tweet.",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "resolve_account",
+            "args": {
+              "name": "Andrej Karpathy"
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Yêu cầu xác định tài khoản dùng resolve_account thay vì tự đoán hoặc lấy timeline."
+      }
+    },
+    {
+      "id": "G12_deduplicate_existing_items",
+      "phase": "B",
+      "query": "Gộp URL trùng trong danh sách đã có này, giữ nguồn gốc: [{\"title\":\"Tin A\",\"url\":\"https://example.com/news?id=1&utm_source=x\",\"source\":\"Feed A\"},{\"title\":\"Tin A\",\"url\":\"https://example.com/news?id=1\",\"source\":\"Feed B\"}]. Không tìm thêm tin.",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "deduplicate_news",
+            "args": {}
+          }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Chọn deduplicate_news cho items đã có; độ chính xác gộp/provenance được kiểm tra riêng bằng unit test."
+      }
+    },
+    {
+      "id": "G13_collect_claim_evidence",
+      "phase": "B",
+      "query": "Đối chiếu phát biểu sau với tối đa 2 nguồn web: Mọi bài trên arXiv đều đã được bình duyệt. Thu thập bằng chứng kèm URL để tôi xem lại.",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "cross_check_claim",
+            "args": {
+              "claim": "Mọi bài trên arXiv đều đã được bình duyệt.",
+              "max_sources": 2
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Yêu cầu tìm bằng chứng cho phát biểu dùng cross_check_claim; kết quả tool không phải verdict đúng/sai."
+      }
+    }
+  ]
+}

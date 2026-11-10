@@ -17,6 +17,17 @@ from .policy.tool import search_company_policy
 from .social_search.tool import search_tweets
 from .send.tool import send_telegram
 from .lookup.tool import web_search
+from .crypto_price.tool import get_crypto_price
+from .github_search.tool import search_github
+from .weather.tool import get_weather
+from .calculator.tool import calculate
+from .resolve_account.tool import resolve_account
+from .deduplicate_news.tool import deduplicate_news
+from .cross_check_claim.tool import cross_check_claim
+from .compare.tool import compare_sources
+from .sentiment.tool import analyze_sentiment
+from .summarize_thread.tool import summarize_thread
+
 
 
 # NOTE (starter_v0): tool names here are intentionally vague. These keys are the
@@ -35,6 +46,17 @@ TOOL_FUNCTIONS = {
     "policy": search_company_policy,
     "papers": arxiv_search,
     "paper_text": get_arxiv_paper_text,
+    "crypto_price": get_crypto_price,
+    "github_search": search_github,
+    "weather": get_weather,
+    "calculator": calculate,
+    "resolve_account": resolve_account,
+    "deduplicate_news": deduplicate_news,
+    "cross_check_claim": cross_check_claim,
+    "compare": compare_sources,
+    "sentiment": analyze_sentiment,
+    "summarize_thread": summarize_thread,
+
     # TODO CP3 (student): register your new tool here, e.g. "my_tool": my_tool_function,
     # then declare it in artifacts/tools.yaml and run `pytest tests/test_tool_contract.py`.
 }
