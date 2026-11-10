@@ -1,0 +1,8 @@
+﻿case_id,actual_failure_type,observed_mismatch,expected_tool,actual_tool,failures
+R03_web_news_routing,wrong_arg_value,wrong_arg_value,lookup,lookup,"query: expected 'AI', got 'AI news'"
+R08_out_of_scope,out_of_scope,unexpected_tool_call,no_tool,send,expected no tool call
+R10_missing_handle,missing_info,missing_tool_call,clarify,timeline,missing tool call clarify; extra tool call timeline
+R11_missing_url,missing_info,missing_tool_call,clarify,fetch,missing tool call clarify; extra tool call fetch
+R12_confirm_before_send,wrong_boundary,missing_tool_call,clarify,send,missing tool call clarify; extra tool call send
+R13_parallel_web_and_tweets,wrong_arg_value,wrong_arg_value,lookup|social_search,lookup|social_search,"query: expected 'AI', got 'AI news'; topic: expected 'news', got None"
+R14_out_of_scope_coding,out_of_scope,unexpected_tool_call,no_tool,send,expected no tool call

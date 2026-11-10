@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debate Poster — Research Agent (Team 4)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --primary: #6366f1;
+      --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      --accent: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+      color: var(--text);
+      padding: 24px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header .subtitle { color: var(--text-muted); font-size: 0.95rem; margin-top: 4px; }
+    .badge-pill {
+      background: rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #c7d2fe;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .badge-bonus {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #6ee7b7;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+      flex: 1;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+    .capabilities-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .cap-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 12px;
+    }
+    .cap-item strong { display: block; color: #a5b4fc; font-size: 0.9rem; margin-bottom: 4px; }
+    .cap-item p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.4; }
+    .tools-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .tools-table th, .tools-table td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .tools-table th { color: #94a3b8; font-weight: 600; }
+    .tools-table code {
+      font-family: 'JetBrains Mono', monospace;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .tag-new {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+    .questions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .question-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid var(--primary);
+      padding: 10px 14px;
+      border-radius: 4px 8px 8px 4px;
+      font-size: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .question-box span { color: #f1f5f9; }
+    .question-box code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      background: rgba(0,0,0,0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .metric-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+    .metric-box .label { font-size: 0.75rem; color: var(--text-muted); }
+    .metric-box .value { font-size: 1.3rem; font-weight: 800; color: #38bdf8; margin-top: 4px; }
+    .footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <h1>Day 03 Lab v2 — Research Agent Showdown</h1>
+      <div class="subtitle">Nhóm 4 (4CHANGLINHNGULAM) • Evidence-Driven Tool Calling Agent • Provider: OpenRouter (GPT-4o-mini)</div>
+    </div>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge-bonus">🏆 Bonus: UI + 4 Tool mới</span>
+      <span class="badge-pill">✅ 108/108 Unit Tests Passed</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- CỘT TRÁI: KHẢ NĂNG & DANH SÁCH TOOL -->
+    <div class="card">
+      <h2>🚀 A1. Năng lực Agent & Kiến trúc Hệ thống</h2>
+      <div class="capabilities-list">
+        <div class="cap-item">
+          <strong>🔍 Tìm kiếm Web & Tin tức</strong>
+          <p>Tích hợp Tavily API, tự động làm sạch query và phân loại topic=news theo ngày/tuần.</p>
+        </div>
+        <div class="cap-item">
+          <strong>🐦 Khai thác Mạng xã hội X</strong>
+          <p>Tự động map tên người nổi tiếng sang handle (@sama, @elonmusk) và quét bài đăng mới.</p>
+        </div>
+        <div class="cap-item">
+          <strong>📄 Đọc URL & Bài báo Khoa học</strong>
+          <p>Trích xuất markdown sạch qua Firecrawl và tra cứu bài báo/tải PDF arXiv thời gian thực.</p>
+        </div>
+        <div class="cap-item">
+          <strong>🛡️ Chốt an toàn (Action Guardrail)</strong>
+          <p>Tự động chặn gửi tin Telegram bừa bãi; chỉ gửi khi người dùng đã xác nhận đồng ý.</p>
+        </div>
+        <div class="cap-item" style="border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.05);">
+          <strong style="color: #34d399;">💎 Crypto & Mã nguồn GitHub</strong>
+          <p>Tool mới của nhóm: Tra cứu giá coin Binance và quét top repositories GitHub.</p>
+        </div>
+        <div class="cap-item" style="border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.05);">
+          <strong style="color: #34d399;">🌤️ Thời tiết & Máy tính AST</strong>
+          <p>Tool mới của nhóm: Dự báo thời tiết các thành phố và tính toán biểu thức toán an toàn.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 10px;">🛠️ A2. Hệ sinh thái 14 Tools Chạy thật</h2>
+      <div style="max-height: 250px; overflow-y: auto;">
+        <table class="tools-table">
+          <thead>
+            <tr>
+              <th>Tên tool</th>
+              <th>Mô tả hoạt động</th>
+              <th>Phân loại</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>clarify</code></td><td>Hỏi lại khi thiếu thông tin hoặc xin xác nhận gửi</td><td>Core</td></tr>
+            <tr><td><code>lookup</code></td><td>Tra cứu web tin tức / thông tin tổng hợp (Tavily)</td><td>Core</td></tr>
+            <tr><td><code>timeline</code></td><td>Lấy tweet gần đây theo username (Twitter API45)</td><td>Core</td></tr>
+            <tr><td><code>social_search</code></td><td>Tìm kiếm tweet theo từ khóa Top / Latest</td><td>Core</td></tr>
+            <tr><td><code>fetch</code></td><td>Đọc nội dung trang web từ URL (Firecrawl)</td><td>Core</td></tr>
+            <tr><td><code>format</code></td><td>Định dạng bản tin digest markdown</td><td>Core</td></tr>
+            <tr><td><code>send</code></td><td>Gửi Telegram có xác nhận an toàn</td><td>Bonus</td></tr>
+            <tr><td><code>policy</code></td><td>Tra cứu chính sách nội bộ & chống injection</td><td>Bonus</td></tr>
+            <tr><td><code>papers</code></td><td>Tìm kiếm bài báo nghiên cứu trên arXiv</td><td>Bonus</td></tr>
+            <tr><td><code>paper_text</code></td><td>Tải PDF arXiv và trích xuất text</td><td>Bonus</td></tr>
+            <tr><td><code>crypto_price</code></td><td>Lấy giá coin Binance thời gian thực (BTC, ETH, SOL)</td><td><span class="tag-new">Nhóm tạo</span></td></tr>
+            <tr><td><code>github_search</code></td><td>Tìm kiếm kho mã nguồn mở GitHub theo stars</td><td><span class="tag-new">Nhóm tạo</span></td></tr>
+            <tr><td><code>weather</code></td><td>Dự báo thời tiết các thành phố thế giới</td><td><span class="tag-new">Nhóm tạo</span></td></tr>
+            <tr><td><code>calculator</code></td><td>Tính toán số học an toàn bằng phân tích cú pháp AST</td><td><span class="tag-new">Nhóm tạo</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CỘT PHẢI: CÂU HỎI MẪU & KẾT QUẢ ĐO LƯỜNG -->
+    <div class="card">
+      <h2>💡 A3. Câu hỏi mẫu để các nhóm thử ngay</h2>
+      <div class="questions-list">
+        <div class="question-box">
+          <span>1. "Tin tức AI hôm nay có gì nổi bật trên web?"</span>
+          <code>lookup(news)</code>
+        </div>
+        <div class="question-box">
+          <span>2. "Tweet mới nhất của Sam Altman là gì?"</span>
+          <code>timeline(sama)</code>
+        </div>
+        <div class="question-box">
+          <span>3. "Giá Bitcoin và Ethereum hôm nay là bao nhiêu USDT?"</span>
+          <code>crypto_price</code>
+        </div>
+        <div class="question-box">
+          <span>4. "Tìm repo mã nguồn mở về LLM Agent trên GitHub"</span>
+          <code>github_search</code>
+        </div>
+        <div class="question-box">
+          <span>5. "Thời tiết hiện tại ở Hà Nội thế nào?"</span>
+          <code>weather</code>
+        </div>
+        <div class="question-box">
+          <span>6. "Tính giúp mình: 15 * 8 - 450 / 5"</span>
+          <code>calculator</code>
+        </div>
+        <div class="question-box">
+          <span>7. "Đăng bản tin này lên Telegram giúp mình"</span>
+          <code>clarify (guardrail)</code>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 10px;">📈 Bằng chứng tối ưu hóa thực nghiệm (Evidence-driven)</h2>
+      <div class="metrics-bar">
+        <div class="metric-box">
+          <div class="label">Baseline v0</div>
+          <div class="value" style="color: #f87171;">65%</div>
+        </div>
+        <div class="metric-box">
+          <div class="label">Phiên bản v1</div>
+          <div class="value" style="color: #fbbf24;">85%</div>
+        </div>
+        <div class="metric-box">
+          <div class="label">Phiên bản v2</div>
+          <div class="value" style="color: #34d399;">95%</div>
+        </div>
+        <div class="metric-box">
+          <div class="label">Mục tiêu v3</div>
+          <div class="value" style="color: #a855f7;">100%</div>
+        </div>
+      </div>
+
+      <div style="background: rgba(99, 102, 241, 0.1); border: 1px dashed rgba(99, 102, 241, 0.3); border-radius: 10px; padding: 14px; text-align: center; margin-top: 6px;">
+        <div style="font-size: 0.85rem; font-weight: 600; color: #c7d2fe;">🌐 LINK DÙNG THỬ GIAO DIỆN STREAMLIT UI:</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: #38bdf8; margin-top: 4px;">http://localhost:8501</div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">(Mở public tunnel qua Cloudflare: <code>cloudflared tunnel --url http://localhost:8501</code>)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    AI20k Bootcamp • Day 03 Lab v2: Research Agent Tool Eval • Nhóm 4 (4CHANGLINHNGULAM)
+  </div>
+
+</body>
+</html>

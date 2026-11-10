@@ -1,0 +1,29 @@
+{
+  "description": "Small explicit account directory. Add sourced records rather than constructing handles from names. This is not a live X directory.",
+  "accounts": [
+    {
+      "name": "Andrej Karpathy",
+      "aliases": ["Karpathy"],
+      "screenname": "karpathy",
+      "source_url": "https://karpathy.ai/",
+      "verification": "personal_homepage_links_to_profile",
+      "checked_on": "2026-11-10"
+    },
+    {
+      "name": "Sam Altman",
+      "aliases": ["Altman", "sama"],
+      "screenname": "sama",
+      "source_url": "https://blog.samaltman.com/",
+      "verification": "personal_blog_links_to_profile",
+      "checked_on": "2026-11-10"
+    },
+    {
+      "name": "Elon Musk",
+      "aliases": ["Musk"],
+      "screenname": "elonmusk",
+      "source_url": "https://x.com/elonmusk",
+      "verification": "project_reference_not_independently_verified",
+      "checked_on": null
+    }
+  ]
+}
