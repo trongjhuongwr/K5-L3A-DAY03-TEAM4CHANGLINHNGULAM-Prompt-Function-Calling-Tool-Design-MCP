@@ -161,3 +161,31 @@ tools:
         expression: {type: string, default: "", description: "Biểu thức toán học cần tính toán (ví dụ: '15 * 8 + 42 / 2', 'sqrt(144)')"}
       required: [expression]
 
+  - name: sentiment
+    description: "Phân tích tâm trạng/sentiment (positive/neutral/negative) của danh sách text hoặc tweet. Dùng khi người dùng muốn biết mọi người nói gì về một chủ đề — tích cực hay tiêu cực. KHÔNG dùng nếu chỉ cần lấy dữ liệu thô."
+    parameters:
+      type: object
+      properties:
+        items: {type: array, default: [], description: "Danh sách items {text, source} cần phân tích", items: {type: object}}
+        summary_style: {type: string, enum: [brief, detailed], default: "brief", description: "Kiểu tóm tắt: 'brief' (1-2 câu) hoặc 'detailed' (paragraph)"}
+      required: []
+
+  - name: compare
+    description: "So sánh 2-3 sources/articles/perspectives trên cùng một topic. Tìm điểm giống/khác, xung đột, consensus. Dùng khi cần đối chiếu nhiều nguồn để xác minh thông tin."
+    parameters:
+      type: object
+      properties:
+        sources: {type: array, default: [], description: "Danh sách sources {title, content, source_url}", items: {type: object}}
+        dimensions: {type: array, default: [], description: "Optional dimensions để so sánh: accuracy, tone, timeliness, clarity", items: {type: string}}
+      required: []
+
+  - name: summarize_thread
+    description: "Tóm tắt một thread conversation (Twitter thread, Reddit, Hacker News) thành các điểm chính, participant, sentiment. Dùng khi user cung cấp thread URL và muốn hiểu nhanh nội dung."
+    parameters:
+      type: object
+      properties:
+        thread_url: {type: string, default: "", description: "URL của thread (phải bắt đầu bằng http:// hoặc https://)"}
+        max_items: {type: integer, default: 20, description: "Số items tối đa xử lý (1-50)"}
+        depth: {type: string, enum: [shallow, deep], default: "deep", description: "Độ sâu: 'shallow' (title+conclusion) hoặc 'deep' (all points)"}
+      required: [thread_url]
+

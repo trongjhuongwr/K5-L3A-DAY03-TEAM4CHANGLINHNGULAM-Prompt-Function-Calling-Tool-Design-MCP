@@ -53,13 +53,16 @@ TOOL_ICONS = {
     "github_search": "🐙",
     "weather": "🌤️",
     "calculator": "🧮",
+    "sentiment": "😊",
+    "compare": "⚖️",
+    "summarize_thread": "📍",
 }
 
 TOOL_CATEGORIES = {
     "🌐 Web & Tin tức": ["lookup", "fetch", "format"],
     "🐦 Mạng xã hội X/Twitter": ["timeline", "social_search"],
     "🔬 Nghiên cứu & Chính sách": ["papers", "paper_text", "policy"],
-    "🚀 Tool mới của nhóm": ["crypto_price", "github_search", "weather", "calculator"],
+    "🚀 Tool mới của nhóm": ["crypto_price", "github_search", "weather", "calculator", "sentiment", "compare", "summarize_thread"],
     "🛡️ An toàn & Tương tác": ["clarify", "send"],
 }
 

@@ -21,6 +21,9 @@ from .crypto_price.tool import get_crypto_price
 from .github_search.tool import search_github
 from .weather.tool import get_weather
 from .calculator.tool import calculate
+from .sentiment.tool import analyze_sentiment
+from .compare.tool import compare_sources
+from .summarize_thread.tool import summarize_thread
 
 
 
@@ -44,6 +47,9 @@ TOOL_FUNCTIONS = {
     "github_search": search_github,
     "weather": get_weather,
     "calculator": calculate,
+    "sentiment": analyze_sentiment,
+    "compare": compare_sources,
+    "summarize_thread": summarize_thread,
 
     # TODO(student): register your new tool here, e.g. "my_tool": my_tool_function,
     # then declare it in artifacts/tools.yaml and run `pytest tests/test_tool_contract.py`.
