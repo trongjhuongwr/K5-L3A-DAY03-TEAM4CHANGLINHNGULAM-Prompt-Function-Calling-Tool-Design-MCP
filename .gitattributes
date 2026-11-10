@@ -1,0 +1,4 @@
+* text=auto
+starter_v0/artifacts/* text eol=lf
+starter_v0/data/* text eol=lf
+starter_v0/runs/* text eol=lf
