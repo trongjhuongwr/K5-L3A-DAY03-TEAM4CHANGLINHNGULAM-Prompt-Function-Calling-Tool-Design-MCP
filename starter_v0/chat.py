@@ -63,9 +63,12 @@ def tool_results_message(events: list[dict[str, Any]]) -> dict[str, str]:
             "TOOL_RESULTS_JSON:\n"
             f"{json_text(events, max_chars=24000)}\n\n"
             "Use only these tool results. If the user asked for a digest and the items are ready, "
-            "call the formatting tool. Otherwise answer the user directly with cited sources when available."
+            "call the formatting tool. Otherwise answer the user directly with cited sources when available. "
+            "IMPORTANT: Always reply in the user's language (e.g. natural Vietnamese if the user asked in Vietnamese), "
+            "translate and synthesize content clearly with attractive markdown, emojis, and clickable source links."
         ),
     }
+
 
 
 def assistant_tool_message(response_text: str | None, calls: list[ToolCall]) -> dict[str, str]:
