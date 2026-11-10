@@ -2,7 +2,7 @@
 
 ## Thông tin nhóm
 
-- Tên nhóm: Team 4 (4 Chàng Lính Ngự Lâm)
+- Tên nhóm: Team 4 Chàng Lính Ngự Lâm
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`
 - URL repo: `https://github.com/trongjhuongwr/K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`

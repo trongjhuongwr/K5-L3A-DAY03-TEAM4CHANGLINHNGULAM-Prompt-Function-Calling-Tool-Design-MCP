@@ -10,7 +10,7 @@
 
 ## 1. Thông tin nhóm
 
-- **Tên nhóm:** Team 4 (4 Chàng Lính Ngự Lâm)
+- **Tên nhóm:** Team 4 Chàng Lính Ngự Lâm
 - **Lớp:** L3A
 - **Repo:** `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`
 - **Thành viên và phân công:** xem chi tiết tại [TEAM.md](../../TEAM.md)

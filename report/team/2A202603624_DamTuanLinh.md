@@ -6,7 +6,7 @@
 - **MSSV:** 2A202603624
 - **Email cá nhân:** damlinh820@gmail.com
 - **Email trường:** 26ai.linhdt3@vinuni.edu.vn
-- **Nhóm:** Team 4
+- **Nhóm:** Team 4 Chàng Lính Ngự Lâm
 - **Ngày báo cáo:** 10/11/2026
 
 ## 2. Phần việc phụ trách

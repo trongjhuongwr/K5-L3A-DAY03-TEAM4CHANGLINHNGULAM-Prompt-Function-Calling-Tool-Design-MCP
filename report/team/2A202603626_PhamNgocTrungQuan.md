@@ -5,7 +5,7 @@
 - **Họ tên:** Phạm Ngọc Trung Quân
 - **MSSV:** 2A202603626
 - **Email:** trungquana123@gmail.com
-- **Nhóm:** Team 4 (4 Chàng Lính Ngự Lâm)
+- **Nhóm:** Team 4 Chàng Lính Ngự Lâm
 - **Repo:** `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`
 
 ## 2. Phần việc phụ trách

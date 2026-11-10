@@ -6,7 +6,7 @@
 - **MSSV:** 2A202603579
 - **Email trường:** 26ai.datlt7@vinuni.edu.vn
 - **Email cá nhân:** dat.ltforwork@gmail.com
-- **Nhóm:** Team 4 (4 Chàng Lính Ngự Lâm)
+- **Nhóm:** Team 4 Chàng Lính Ngự Lâm
 - **Repo:** `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`
 
 ## 2. Phần việc phụ trách

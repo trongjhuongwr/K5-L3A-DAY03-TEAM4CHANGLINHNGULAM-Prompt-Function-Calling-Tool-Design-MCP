@@ -5,7 +5,7 @@
 - **Họ tên:** Nguyễn Trọng Hưởng
 - **MSSV:** 2A202603607
 - **Email:** nguyentronghuong05@gmail.com
-- **Nhóm:** Team 4 (4 Chàng Lính Ngự Lâm)
+- **Nhóm:** Team 4 Chàng Lính Ngự Lâm
 - **Repo:** `K5-L3A-DAY03-TEAM4CHANGLINHNGULAM-Prompt-Function-Calling-Tool-Design-MCP`
 
 ## 2. Phần việc phụ trách
