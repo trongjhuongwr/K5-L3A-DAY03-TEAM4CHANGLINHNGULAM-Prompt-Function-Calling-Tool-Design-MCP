@@ -1,1 +1,2 @@
 version,author,changed_artifact,artifact_version,prompt_hash,tools_hash,reason,hypothesis,metric_before,metric_after,run_file
+v0,original,none,v0+peb1c8179815b+t5b22a2476d41,eb1c8179815b,5b22a2476d41,Initial baseline measurement,No changes - establish baseline,N/A,case_accuracy=0.65; routing_accuracy=0.75; args_accuracy=0.65; multiturn_accuracy=1.00,v0_B_base_openrouter_20261110T104223427707
