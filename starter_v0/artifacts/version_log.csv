@@ -1,1 +1,45 @@
 version,author,changed_artifact,artifact_version,prompt_hash,tools_hash,reason,hypothesis,metric_before,metric_after,run_file
+v0,,,,,,,,,,v0_B_base_openrouter_20261110T110350530397.json
+v1,,S?a prompt,,,,,,"total_cases: 20
+measured_cases: 20
+provider_error_cases: 0
+passed_cases: 14
+case_accuracy: 0.7
+tool_routing_accuracy: 0.85
+argument_accuracy: 0.7
+multiturn_accuracy: 0.8333
+failure_counts: {'wrong_tool': 2, 'missing_info': 2, 'wrong_boundary': 1, 'wrong_arg_value': 1}
+observed_mismatch_counts: {'wrong_arg_value': 3, 'missing_tool_call': 3}","total_cases: 20
+measured_cases: 20
+provider_error_cases: 0
+passed_cases: 17
+case_accuracy: 0.85
+tool_routing_accuracy: 1.0
+argument_accuracy: 0.85
+multiturn_accuracy: 0.8333
+failure_counts: {'wrong_tool': 1, 'wrong_boundary': 1, 'wrong_arg_value': 1}
+observed_mismatch_counts: {'wrong_arg_value': 3}",v0_B_base_openrouter_20261110T120040745834.json
+v2,,S?a tools,v2+p856823f52a3d+tf2261840c3ca,,,,,,"total_cases: 20
+measured_cases: 20
+provider_error_cases: 0
+passed_cases: 19
+case_accuracy: 0.95
+tool_routing_accuracy: 1.0
+argument_accuracy: 0.95
+multiturn_accuracy: 1.0
+failure_counts: {'wrong_boundary': 1}
+observed_mismatch_counts: {'wrong_arg_value': 1}",v0_B_base_openai_20261110T172711350432.json
+v3,,,,,,,,,"total_cases: 20
+measured_cases: 20
+provider_error_cases: 0
+passed_cases: 20
+case_accuracy: 1.0
+tool_routing_accuracy: 1.0
+argument_accuracy: 1.0
+multiturn_accuracy: 1.0
+failure_counts: {}
+observed_mismatch_counts: {}
+
+Artifact version: v0+pfa2073cb54dd+t89701de53048
+
+Saved: D:\Workspace\AI20K\Lab Day 3\starter_v0\runs\v0_B_base_openai_20261110T174535403551.json",

@@ -16,7 +16,7 @@
 tools:
   # ---------------- Core tools ----------------
   - name: clarify
-    description: "Gửi một câu hỏi cho người dùng."
+    description: "Hỏi lại người dùng khi thiếu thông tin bắt buộc (thiếu tên tài khoản, thiếu URL) hoặc cần xin xác nhận trước khi thực hiện hành động gửi tin."
     parameters:
       type: object
       properties:
@@ -26,7 +26,7 @@ tools:
       required: [question]
 
   - name: timeline
-    description: "Lấy các bài đăng gần đây."
+    description: "Lấy các bài đăng (tweet) gần đây của một tài khoản Twitter/X theo screenname (ví dụ Sam Altman -> 'sama', Elon Musk -> 'elonmusk')."
     parameters:
       type: object
       properties:
@@ -35,43 +35,43 @@ tools:
       required: [screenname]
 
   - name: social_search
-    description: "Tìm trên mạng xã hội."
+    description: "Tìm kiếm bài đăng (tweet) trên mạng xã hội Twitter/X theo từ khóa. Dùng khi người dùng muốn biết cộng đồng/dư luận đang nói gì, bàn gì về một chủ đề. KHÔNG dùng khi người dùng yêu cầu xem trang cá nhân hoặc timeline của một người cụ thể."
     parameters:
       type: object
       properties:
-        query: {type: string, default: "", description: "Từ khóa"}
-        search_type: {type: string, enum: [Latest, Top], default: "Latest", description: "Cách sắp xếp"}
-        limit: {type: integer, default: 5, description: "Số lượng"}
+        query: {type: string, default: "", description: "Từ khóa tìm kiếm tweet"}
+        search_type: {type: string, enum: [Latest, Top], default: "Latest", description: "Cách sắp xếp: 'Latest' (mới nhất) hoặc 'Top' (phổ biến nhất)"}
+        limit: {type: integer, default: 5, description: "Số lượng tweet cần lấy"}
       required: [query]
 
   - name: lookup
-    description: "Tra cứu thông tin trên internet."
+    description: "Tra cứu thông tin hoặc tin tức tổng hợp trên internet qua Tavily. Dùng khi cần tìm kiếm bài viết, tin tức thời sự, sự kiện. KHÔNG dùng để tra cứu bài đăng mạng xã hội."
     parameters:
       type: object
       properties:
-        query: {type: string, default: "", description: "Truy vấn"}
-        topic: {type: string, enum: [general, news], default: "general", description: "Phân loại"}
-        timeframe: {type: string, enum: [day, week, month, year], default: "week", description: "Khoảng thời gian"}
-        max_results: {type: integer, default: 5, description: "Số kết quả"}
+        query: {type: string, default: "", description: "Từ khóa truy vấn cốt lõi. KHÔNG thêm chữ 'news' hoặc 'tin tức' vào đây nếu đã chọn topic=news"}
+        topic: {type: string, enum: [general, news], default: "general", description: "Phân loại tìm kiếm: 'general' (thông tin chung) hoặc 'news' (tin tức thời sự)"}
+        timeframe: {type: string, enum: [day, week, month, year], default: "week", description: "Khoảng thời gian: 'day' (hôm nay), 'week' (tuần này), 'month', 'year'"}
+        max_results: {type: integer, default: 5, description: "Số lượng kết quả cần lấy"}
       required: [query]
 
   - name: fetch
-    description: "Lấy nội dung từ một địa chỉ."
+    description: "Đọc nội dung chi tiết từ một đường dẫn URL (bắt đầu bằng http:// hoặc https://) qua Firecrawl. Dùng khi người dùng cung cấp link cụ thể để đọc hoặc tóm tắt bài viết. KHÔNG dùng nếu người dùng chưa cung cấp link."
     parameters:
       type: object
       properties:
-        url: {type: string, default: "", description: "Địa chỉ"}
+        url: {type: string, default: "", description: "Địa chỉ URL đầy đủ (ví dụ: https://example.com/bai-viet)"}
       required: [url]
 
   - name: format
-    description: "Trình bày dữ liệu đã có thành văn bản."
+    description: "Tổng hợp và định dạng danh sách tin tức/dữ liệu đã thu thập thành bản tin Markdown hoàn chỉnh theo khuôn mẫu (brief, sections, bullets, thread, daily_ai_vn). Dùng khi người dùng yêu cầu soạn bản tin, tạo digest, hoặc định dạng tổng hợp."
     parameters:
       type: object
       properties:
         items:
           type: array
           default: []
-          description: "Danh sách item"
+          description: "Danh sách các item tin tức/dữ liệu cần định dạng"
           items:
             type: object
             properties:
@@ -80,46 +80,75 @@ tools:
               source: {type: string}
               summary: {type: string}
               section: {type: string}
-        template: {type: string, enum: [brief, sections, bullets, thread, daily_ai_vn], default: "sections", description: "Khuôn"}
-        headline: {type: string, default: "", description: "Tiêu đề"}
+        template: {type: string, enum: [brief, sections, bullets, thread, daily_ai_vn], default: "sections", description: "Mẫu trình bày: 'brief' (ngắn gọn), 'sections' (theo chuyên mục), 'bullets' (gạch đầu dòng), 'thread' (dạng chuỗi bài), 'daily_ai_vn' (bản tin AI tiếng Việt)"}
+        headline: {type: string, default: "", description: "Tiêu đề bản tin"}
       required: [items, template]
 
   # ---------------- Bonus tools ----------------
   - name: send
-    description: "Gửi một đoạn văn bản đi."
+    description: "Gửi văn bản lên kênh Telegram. CHỈ ĐƯỢC GỌI khi confirmed=true (người dùng đã xác nhận đồng ý gửi). Nếu chưa xác nhận, phải gọi clarify để hỏi trước."
     parameters:
       type: object
       properties:
-        text: {type: string, default: "", description: "Nội dung"}
-        confirmed: {type: boolean, default: false, description: "Cờ xác nhận"}
+        text: {type: string, default: "", description: "Nội dung văn bản cần gửi"}
+        confirmed: {type: boolean, default: false, description: "Cờ xác nhận: true nếu người dùng đã đồng ý gửi, false nếu chưa"}
       required: [text]
 
   - name: policy
-    description: "Tìm trong tài liệu nội bộ."
+    description: "Tra cứu cẩm nang chính sách và quy định nội bộ của tổ chức (ai_research, source_citation, data_privacy, external_publishing, tool_usage). Dùng khi người dùng hỏi về quy định nội bộ, chính sách trích dẫn, bảo mật dữ liệu công ty. KHÔNG dùng cho tin tức ngoài công ty."
     parameters:
       type: object
       properties:
-        query: {type: string, default: "", description: "Truy vấn"}
-        policy_area: {type: string, enum: [all, ai_research, source_citation, data_privacy, external_publishing, tool_usage], default: "all", description: "Nhóm"}
-        top_k: {type: integer, default: 3, description: "Số mục"}
+        query: {type: string, default: "", description: "Từ khóa tìm kiếm trong chính sách nội bộ"}
+        policy_area: {type: string, enum: [all, ai_research, source_citation, data_privacy, external_publishing, tool_usage], default: "all", description: "Phạm vi chính sách cần tra cứu"}
+        top_k: {type: integer, default: 3, description: "Số lượng điều khoản liên quan cần lấy"}
       required: [query]
 
   - name: papers
-    description: "Tìm bài báo khoa học."
+    description: "Tìm kiếm các bài báo khoa học và nghiên cứu học thuật trên kho lưu trữ arXiv theo từ khóa và chủ đề. Dùng khi người dùng muốn tìm kiếm công trình nghiên cứu, bài báo AI/ML."
     parameters:
       type: object
       properties:
-        query: {type: string, default: "", description: "Từ khóa"}
-        max_results: {type: integer, default: 5, description: "Số lượng"}
-        sort_by: {type: string, enum: [relevance, lastUpdatedDate, submittedDate], default: "relevance", description: "Sắp xếp"}
+        query: {type: string, default: "", description: "Từ khóa hoặc chủ đề nghiên cứu"}
+        max_results: {type: integer, default: 5, description: "Số lượng bài báo cần lấy"}
+        sort_by: {type: string, enum: [relevance, lastUpdatedDate, submittedDate], default: "relevance", description: "Tiêu chí sắp xếp"}
       required: [query]
 
   - name: paper_text
-    description: "Lấy nội dung text của một bài báo."
+    description: "Tải tệp PDF của bài báo từ arXiv và trích xuất nội dung văn bản bên trong. Dùng khi người dùng cung cấp mã định danh hoặc đường dẫn arXiv và muốn đọc sâu chi tiết bài báo."
     parameters:
       type: object
       properties:
-        arxiv_url: {type: string, default: "", description: "ID hoặc địa chỉ"}
-        max_pages: {type: integer, default: 5, description: "Số trang"}
-        max_chars: {type: integer, default: 8000, description: "Số ký tự"}
+        arxiv_url: {type: string, default: "", description: "Mã định danh arXiv (ví dụ: '1706.03762') hoặc đường dẫn URL bài báo arXiv"}
+        max_pages: {type: integer, default: 5, description: "Số trang tối đa cần trích xuất"}
+        max_chars: {type: integer, default: 8000, description: "Số ký tự tối đa cần trích xuất"}
       required: [arxiv_url]
+
+
+  # ---------------- Team New Tools (Bonus Track) ----------------
+
+  - name: calculator
+    description: "Tính toán biểu thức số học (toán học) an toàn cho agent, hỗ trợ các phép tính cộng, trừ, nhân, chia, lũy thừa, căn bậc hai. Dùng khi người dùng yêu cầu tính toán số liệu cụ thể."
+    parameters:
+      type: object
+      properties:
+        expression: {type: string, default: "", description: "Biểu thức toán học cần tính toán (ví dụ: '15 * 8 + 42 / 2', 'sqrt(144)')"}
+      required: [expression]
+
+  - name: sentiment
+    description: "Phân tích tâm trạng/sentiment (positive/neutral/negative) của danh sách text hoặc tweet. Dùng khi người dùng muốn biết mọi người nói gì về một chủ đề — tích cực hay tiêu cực. KHÔNG dùng nếu chỉ cần lấy dữ liệu thô."
+    parameters:
+      type: object
+      properties:
+        items: {type: array, default: [], description: "Danh sách items {text, source} cần phân tích", items: {type: object}}
+        summary_style: {type: string, enum: [brief, detailed], default: "brief", description: "Kiểu tóm tắt: 'brief' (1-2 câu) hoặc 'detailed' (paragraph)"}
+      required: []
+
+  - name: compare
+    description: "So sánh 2-3 sources/articles/perspectives trên cùng một topic. Tìm điểm giống/khác, xung đột, consensus. Dùng khi cần đối chiếu nhiều nguồn để xác minh thông tin."
+    parameters:
+      type: object
+      properties:
+        sources: {type: array, default: [], description: "Danh sách sources {title, content, source_url}", items: {type: object}}
+        dimensions: {type: array, default: [], description: "Optional dimensions để so sánh: accuracy, tone, timeliness, clarity", items: {type: string}}
+      required: []

@@ -3,5 +3,177 @@
   "dataset_role": "group",
   "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [{
+      "id": "G01_calculator_basic",
+      "phase": "B",
+      "suite": "group",
+      "query": "Tính giúp tôi biểu thức 15 * 8 + 42 / 2",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "calculator",
+            "args": {
+              "expression": "15 * 8 + 42 / 2"
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "category": "calculator",
+        "difficulty": "easy",
+        "description": "Kiểm tra khả năng nhận diện yêu cầu tính toán và truyền biểu thức."
+      }
+    },
+    {
+      "id": "G02_calculator_functions",
+      "phase": "B",
+      "suite": "group",
+      "query": "Tính căn bậc hai của 144 bằng công cụ tính toán",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "calculator",
+            "args": {
+              "expression": "sqrt(144)"
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "category": "calculator",
+        "difficulty": "medium",
+        "description": "Kiểm tra khả năng sử dụng hàm toán học được hỗ trợ."
+      }
+    },
+    {
+      "id": "G03_sentiment_basic",
+      "phase": "B",
+      "suite": "group",
+      "query": "Phân tích cảm xúc của hai nội dung sau: Sản phẩm rất tốt và hữu ích. Ứng dụng thường xuyên bị lỗi.",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "sentiment",
+            "args": {
+              "items": [
+                {
+                  "text": "Sản phẩm rất tốt và hữu ích"
+                },
+                {
+                  "text": "Ứng dụng thường xuyên bị lỗi"
+                }
+              ],
+              "summary_style": "brief"
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "category": "sentiment",
+        "difficulty": "easy",
+        "description": "Kiểm tra khả năng nhận diện yêu cầu phân tích cảm xúc."
+      }
+    },
+    {
+      "id": "G04_sentiment_multiple",
+      "phase": "B",
+      "suite": "group",
+      "query": "Hãy phân tích cảm xúc của các bình luận: Tôi rất hài lòng với dịch vụ. Chất lượng quá tệ. Sản phẩm bình thường.",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "sentiment",
+            "args": {
+              "items": [
+                {
+                  "text": "Tôi rất hài lòng với dịch vụ"
+                },
+                {
+                  "text": "Chất lượng quá tệ"
+                },
+                {
+                  "text": "Sản phẩm bình thường"
+                }
+              ],
+              "summary_style": "brief"
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "category": "sentiment",
+        "difficulty": "medium",
+        "description": "Kiểm tra phân tích nhiều nội dung cùng lúc."
+      }
+    },
+    {
+      "id": "G05_compare_basic",
+      "phase": "B",
+      "suite": "group",
+      "query": "So sánh hai nguồn thông tin sau về AI trong giáo dục: Nguồn A: AI giúp cá nhân hóa việc học và cải thiện kết quả giáo dục. Nguồn B: AI hỗ trợ giáo viên và cá nhân hóa trải nghiệm học tập.",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "compare",
+            "args": {
+              "sources": [
+                {
+                  "title": "Nguồn A",
+                  "content": "AI giúp cá nhân hóa việc học và cải thiện kết quả giáo dục"
+                },
+                {
+                  "title": "Nguồn B",
+                  "content": "AI hỗ trợ giáo viên và cá nhân hóa trải nghiệm học tập"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "category": "compare",
+        "difficulty": "easy",
+        "description": "Kiểm tra khả năng nhận diện yêu cầu so sánh nhiều nguồn."
+      }
+    },
+    {
+      "id": "G06_compare_dimensions",
+      "phase": "B",
+      "suite": "group",
+      "query": "So sánh hai nguồn sau theo các tiêu chí nội dung và quan điểm: Nguồn A: Công nghệ AI giúp tự động hóa công việc và tiết kiệm thời gian. Nguồn B: AI có thể tăng năng suất nhưng cần kiểm soát rủi ro.",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "compare",
+            "args": {
+              "sources": [
+                {
+                  "title": "Nguồn A",
+                  "content": "Công nghệ AI giúp tự động hóa công việc và tiết kiệm thời gian"
+                },
+                {
+                  "title": "Nguồn B",
+                  "content": "AI có thể tăng năng suất nhưng cần kiểm soát rủi ro"
+                }
+              ],
+              "dimensions": [
+                "nội dung",
+                "quan điểm"
+              ]
+            }
+          }
+        ]
+      },
+      "metadata": {
+        "category": "compare",
+        "difficulty": "medium",
+        "description": "Kiểm tra khả năng truyền thêm tiêu chí so sánh."
+      }
+    }]
 }

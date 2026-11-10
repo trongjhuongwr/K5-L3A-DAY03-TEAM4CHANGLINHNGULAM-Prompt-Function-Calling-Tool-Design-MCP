@@ -7,7 +7,9 @@ from providers.ollama_provider import OllamaProvider
 
 def make_provider(name: str):
     if name == "openai":
-        return OpenAIProvider()
+        return OpenAIProvider(api_key_env="OPENAI_API_KEY",
+    base_url="https://api.shopaikey.com/v1",
+    default_model="gpt-4o-mini")
     if name == "openrouter":
         return OpenRouterProvider()
     if name == "anthropic":
