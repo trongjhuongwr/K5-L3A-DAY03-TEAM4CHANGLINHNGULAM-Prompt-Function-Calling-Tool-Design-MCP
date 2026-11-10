@@ -16,7 +16,7 @@
 tools:
   # ---------------- Core tools ----------------
   - name: clarify
-    description: "Gửi một câu hỏi cho người dùng."
+    description: "Hỏi lại người dùng khi thiếu thông tin bắt buộc (thiếu tên tài khoản, thiếu URL) hoặc cần xin xác nhận trước khi thực hiện hành động gửi tin."
     parameters:
       type: object
       properties:
@@ -45,7 +45,7 @@ tools:
       required: [query]
 
   - name: lookup
-    description: "Tra cứu thông tin trên internet."
+    description: "Tra cứu thông tin hoặc tin tức trên internet. Dùng khi cần tìm kiếm bài viết, tin tức thời sự. KHÔNG dùng để tra cứu tweet trên mạng xã hội."
     parameters:
       type: object
       properties:
@@ -86,7 +86,7 @@ tools:
 
   # ---------------- Bonus tools ----------------
   - name: send
-    description: "Gửi một đoạn văn bản đi."
+    description: "Gửi văn bản lên Telegram. CHỈ ĐƯỢC GỌI khi confirmed=true (người dùng đã xác nhận đồng ý gửi). Nếu chưa xác nhận, phải gọi clarify để hỏi trước."
     parameters:
       type: object
       properties:
